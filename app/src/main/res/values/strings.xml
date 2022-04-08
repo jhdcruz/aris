@@ -7,18 +7,20 @@
     <string name="prompt_password">Password</string>
     <string name="action_forgot">Forgot password</string>
     <string name="action_sign_in_short">Sign in</string>
+    <string name="sign_in_with_google">Sign in with Google</string>
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Invalid password</string>
     <string name="login_failed">"Login failed"</string>
     <string name="copyright">"Copyright © 2022 | ProjectHCI-3"</string>
 
-    <!-- Toolbar menu -->
-    <string name="action_logout">Logout</string>
-    <string name="sign_in_with_google">Sign in with Google</string>
-
     <!-- Navigation -->
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
+    <string name="title_profile">Profile</string>
+    <string name="title_grades">Grades</string>
+    <string name="title_schedule">Schedule</string>
+    <string name="title_balance">Balance</string>
     <string name="title_notifications">Notifications</string>
+
+    <!-- Actions -->
     <string name="action_notifications">Notifications</string>
+    <string name="action_logout">Logout</string>
 </resources>

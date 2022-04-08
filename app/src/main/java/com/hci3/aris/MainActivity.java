@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Prevent back button on bottom navigation.
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications)
+                R.id.navigation_profile, R.id.navigation_grades, R.id.navigation_schedule, R.id.navigation_balance)
                 .build();
 
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration

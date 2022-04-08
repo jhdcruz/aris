@@ -3,23 +3,29 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
+    app:startDestination="@+id/navigation_profile">
 
     <fragment
-        android:id="@+id/navigation_home"
-        android:name="com.hci3.aris.ui.home.HomeFragment"
-        android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        android:id="@+id/navigation_profile"
+        android:name="com.hci3.aris.ui.profile.ProfileFragment"
+        android:label="@string/title_profile"
+        tools:layout="@layout/fragment_profile" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.hci3.aris.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        android:id="@+id/navigation_grades"
+        android:name="com.hci3.aris.ui.grades.GradesFragment"
+        android:label="@string/title_grades"
+        tools:layout="@layout/fragment_grades" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.hci3.aris.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:id="@+id/navigation_schedule"
+        android:name="com.hci3.aris.ui.schedule.ScheduleFragment"
+        android:label="@string/title_schedule"
+        tools:layout="@layout/fragment_schedule" />
+
+    <fragment
+        android:id="@+id/navigation_balance"
+        android:name="com.hci3.aris.ui.balance.BalanceFragment"
+        android:label="@string/title_balance"
+        tools:layout="@layout/fragment_balance" />
 </navigation>
