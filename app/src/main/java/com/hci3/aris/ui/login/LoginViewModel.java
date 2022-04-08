@@ -35,7 +35,7 @@ public class LoginViewModel extends ViewModel {
 
         if (result instanceof Result.Success) {
             LoggedInUser data = ((Result.Success<LoggedInUser>) result).getData();
-            loginResult.setValue(new LoginResult(new LoggedInUserView(data.getDisplayName())));
+            loginResult.setValue(new LoginResult(new LoginUserState(data.getDisplayName())));
         } else {
             loginResult.setValue(new LoginResult(R.string.login_failed));
         }
@@ -55,8 +55,7 @@ public class LoginViewModel extends ViewModel {
     private boolean isUserNameValid(String username) {
         if (username == null) {
             return false;
-        }
-        if (username.contains("@")) {
+        } else if (username.contains("@")) {
             return Patterns.EMAIL_ADDRESS.matcher(username).matches();
         } else {
             return !username.trim().isEmpty();

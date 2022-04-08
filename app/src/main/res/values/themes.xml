@@ -8,4 +8,13 @@
         <item name="colorOnSecondary">@color/black</item>
         <item name="android:statusBarColor" tools:targetApi="l">@color/primary</item>
     </style>
+
+    <style name="Theme.ARIS.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.ARIS.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.ARIS.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>
