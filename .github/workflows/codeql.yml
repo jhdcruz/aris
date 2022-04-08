@@ -56,7 +56,9 @@ jobs:
           distribution: 'temurin'
           cache: gradle
 
-      - uses: jhdcruz/aris/.github/workflows/ci.yml@main
+      - run: |
+          chmod +x gradlew
+          ./gradlew build
 
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v2
