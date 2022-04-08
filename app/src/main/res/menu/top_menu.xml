@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/logout"
+        android:icon="@drawable/outline_logout_black_24"
+        android:title="@string/action_logout"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/notifications"
+        android:icon="@drawable/outline_notifications_black_24"
+        android:title="@string/action_notifications"
+        app:showAsAction="ifRoom" />
+</menu>

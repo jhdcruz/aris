@@ -69,9 +69,9 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/login"
-        style="@android:style/Widget.Material.Button"
+        style="@style/Widget.Material3.Button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="start"
@@ -102,14 +102,16 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.3" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/forgot_password"
-        style="@android:style/Widget.Material.Button.Borderless"
+        style="@style/Widget.Material3.Button.TextButton.Dialog"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
         android:insetTop="0dp"
         android:insetBottom="0dp"
         android:text="@string/action_forgot"
+        android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textColor="@color/primary"
         android:textSize="16sp"
@@ -118,7 +120,7 @@
         app:layout_constraintTop_toBottomOf="@+id/login" />
 
 
-    <TextView
+    <com.google.android.material.textview.MaterialTextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -132,9 +134,9 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/forgot_password" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/google"
-        style="@android:style/Widget.Material.Button.Borderless"
+        style="@style/Widget.Material3.Button.TextButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -154,7 +156,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView2"
         app:rippleColor="@color/primary_dark" />
 
-    <TextView
+    <com.google.android.material.textview.MaterialTextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

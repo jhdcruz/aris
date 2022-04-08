@@ -10,10 +10,16 @@
         <entry key="app/src/main/res/layout-w936dp/activity_login.xml" value="0.12773224043715847" />
         <entry key="app/src/main/res/layout-w936dp/content_scrolling.xml" value="0.13968579234972678" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.33" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="app/src/main/res/layout/content_scrolling.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/fragment_dashboard.xml" value="0.1984375" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.21" />
+        <entry key="app/src/main/res/layout/fragment_notifications.xml" value="0.1984375" />
+        <entry key="app/src/main/res/menu/action_menu.xml" value="0.1984375" />
+        <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.1984375" />
         <entry key="app/src/main/res/menu/menu_main.xml" value="0.1984375" />
+        <entry key="app/src/main/res/menu/top_menu.xml" value="0.25" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
       </map>
     </option>
   </component>
