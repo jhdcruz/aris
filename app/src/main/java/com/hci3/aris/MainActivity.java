@@ -20,25 +20,29 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        // Use binding as an alternative for getting widgets instead of findViewById
         ActivityMainBinding binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+        // Set the toolbar to act as the ActionBar for this Activity window.
         setSupportActionBar(binding.toolbar);
 
-        NavHostFragment navHostFragment = (NavHostFragment) getSupportFragmentManager().findFragmentById(R.id.nav_host_fragment_activity_main);
-        assert navHostFragment != null;
-        NavController navController = navHostFragment.getNavController();
-
-        // Prevent back button on bottom navigation.
+        // Prevent back button on bottom navigation fragments.
+        // these are considered as top-level navigation thus shouldn't have one
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.navigation_profile, R.id.navigation_grades, R.id.navigation_schedule, R.id.navigation_balance)
                 .build();
 
-        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration
-        );
+        // Responsible for the bottom navigation
+        NavHostFragment navHostFragment = (NavHostFragment) getSupportFragmentManager().findFragmentById(R.id.nav_host_fragment_activity_main);
+        assert navHostFragment != null;
+        NavController navController = navHostFragment.getNavController();
+        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(binding.navView, navController);
     }
 
+    /* Add toolbar menu options */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
 
@@ -46,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
         return super.onCreateOptionsMenu(menu);
     }
 
+    /* Toolbar onClick actions */
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if (item.getItemId() == R.id.logout) {
