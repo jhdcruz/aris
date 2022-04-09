@@ -3,6 +3,7 @@
     <style name="Theme.ARIS" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/primary</item>
+        <item name="colorSurface">@color/material_dynamic_neutral90</item>
         <item name="colorSecondaryContainer">@color/primary</item>
         <item name="colorOnSecondaryContainer">@color/black_matte</item>
         <item name="colorOnPrimary">@color/white</item>
