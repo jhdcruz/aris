@@ -1,5 +1,6 @@
 package com.hci3.aris;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -21,7 +22,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        // Use binding as an alternative for getting widgets instead of findViewById
+        // Use binding as an alternative for getting widgets
+        // in activity_main instead of findViewById
         ActivityMainBinding binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
@@ -34,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
                 R.id.navigation_profile, R.id.navigation_grades, R.id.navigation_schedule, R.id.navigation_balance)
                 .build();
 
-        // Responsible for the bottom navigation
+        // Responsible for the navigation
         NavHostFragment navHostFragment = (NavHostFragment) getSupportFragmentManager().findFragmentById(R.id.nav_host_fragment_activity_main);
         assert navHostFragment != null;
         NavController navController = navHostFragment.getNavController();
@@ -45,20 +47,19 @@ public class MainActivity extends AppCompatActivity {
     /* Add toolbar menu options */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-
         getMenuInflater().inflate(R.menu.top_menu, menu);
         return super.onCreateOptionsMenu(menu);
     }
 
     /* Toolbar onClick actions */
+    @SuppressLint("NonConstantResourceId")
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        if (item.getItemId() == R.id.logout) {
-            finish();
-
-            Intent intent = new Intent(MainActivity.this,
-                    LoginActivity.class);
-            startActivity(intent);
+        switch (item.getItemId()) {
+            case R.id.logout:
+                finish();
+                Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+                startActivity(intent);
         }
         return super.onOptionsItemSelected(item);
     }
