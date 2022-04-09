@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.hci3.aris.R;
+import com.hci3.aris.ui.profile.ProfileViewModel;
 
 public class GradesFragment extends Fragment {
 
@@ -29,10 +30,9 @@ public class GradesFragment extends Fragment {
     }
 
     @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
         mViewModel = new ViewModelProvider(this).get(GradesViewModel.class);
-        // TODO: Use the ViewModel
     }
 
 }
