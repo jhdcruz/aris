@@ -1,44 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DesignSurface">
-    <option name="filePathToZoomLevelMap">
-      <map>
-        <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2025" />
-        <entry key="app/src/main/res/drawable/ic_baseline_timeline_24.xml" value="0.2025" />
-        <entry key="app/src/main/res/drawable/ic_dashboard_black_24dp.xml" value="0.2025" />
-        <entry key="app/src/main/res/drawable/ic_home_black_24dp.xml" value="0.2025" />
-        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.2025" />
-        <entry key="app/src/main/res/drawable/ic_logout_24.xml" value="0.2025" />
-        <entry key="app/src/main/res/drawable/ic_notifications_black_24dp.xml" value="0.2025" />
-        <entry key="app/src/main/res/drawable/outline_logout_20.xml" value="0.2025" />
-        <entry key="app/src/main/res/drawable/outline_notifications_24.xml" value="0.2025" />
-        <entry key="app/src/main/res/layout-w1240dp/activity_login.xml" value="0.12751004016064257" />
-        <entry key="app/src/main/res/layout-w1240dp/content_scrolling.xml" value="0.12751004016064257" />
-        <entry key="app/src/main/res/layout-w936dp/activity_login.xml" value="0.12773224043715847" />
-        <entry key="app/src/main/res/layout-w936dp/content_scrolling.xml" value="0.13968579234972678" />
-        <entry key="app/src/main/res/layout/activity_login.xml" value="0.33" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.22" />
-        <entry key="app/src/main/res/layout/balance_fragment.xml" value="0.19791666666666666" />
-        <entry key="app/src/main/res/layout/content_scrolling.xml" value="0.22" />
-        <entry key="app/src/main/res/layout/fragment_balance.xml" value="0.19791666666666666" />
-        <entry key="app/src/main/res/layout/fragment_dashboard.xml" value="0.1984375" />
-        <entry key="app/src/main/res/layout/fragment_grades.xml" value="0.19791666666666666" />
-        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.21" />
-        <entry key="app/src/main/res/layout/fragment_notifications.xml" value="0.1984375" />
-        <entry key="app/src/main/res/layout/fragment_schedule.xml" value="0.19791666666666666" />
-        <entry key="app/src/main/res/layout/grades_fragment.xml" value="0.19791666666666666" />
-        <entry key="app/src/main/res/menu/action_menu.xml" value="0.1984375" />
-        <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.1984375" />
-        <entry key="app/src/main/res/menu/menu_main.xml" value="0.1984375" />
-        <entry key="app/src/main/res/menu/top_menu.xml" value="0.25" />
-        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
-      </map>
-    </option>
-  </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
-    <output url="file://$PROJECT_DIR$/build/classes" />
-  </component>
-  <component name="ProjectType">
-    <option name="id" value="Android" />
-  </component>
+    <component name="ProjectRootManager" default="true" languageLevel="JDK_11"
+        project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK" version="2">
+        <output url="file://$PROJECT_DIR$/build/classes" />
+    </component>
+    <component name="ProjectType">
+        <option name="id" value="Android" />
+    </component>
 </project>
