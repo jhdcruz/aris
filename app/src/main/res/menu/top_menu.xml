@@ -6,11 +6,5 @@
         android:id="@+id/logout"
         android:icon="@drawable/ic_logout_24"
         android:title="@string/action_logout"
-        app:showAsAction="never" />
-
-    <item
-        android:id="@+id/notifications"
-        android:icon="@drawable/outline_notifications_24"
-        android:title="@string/action_notifications"
         app:showAsAction="ifRoom" />
 </menu>
