@@ -1,17 +1,17 @@
 <resources>
     <string name="app_name">ARIS</string>
     <string name="title_activity_main">ARIS</string>
+    <string name="copyright">"Copyright © 2022 | ProjectHCI-3"</string>
 
     <!-- Strings related to login -->
-    <string name="prompt_email">Email / Username</string>
-    <string name="prompt_password">Password</string>
-    <string name="action_forgot">Forgot password</string>
-    <string name="action_sign_in_short">Sign in</string>
-    <string name="sign_in_with_google">Sign in with Google</string>
-    <string name="invalid_username">Not a valid username</string>
-    <string name="invalid_password">Invalid password</string>
+    <string name="login_email">Email</string>
+    <string name="login_pass">Password</string>
+    <string name="login_signin">Sign in</string>
+    <string name="login_google">Sign in with Google</string>
+    <string name="login_invalid_user">Not a valid username</string>
+    <string name="login_invalid_pass">Invalid password</string>
     <string name="login_failed">"Login failed"</string>
-    <string name="copyright">"Copyright © 2022 | ProjectHCI-3"</string>
+
 
     <!-- Navigation -->
     <string name="title_profile">Profile</string>
@@ -20,7 +20,11 @@
     <string name="title_balance">Balance</string>
     <string name="title_notifications">Notifications</string>
 
-    <!-- Actions -->
     <string name="action_notifications">Notifications</string>
     <string name="action_logout">Logout</string>
+    <string name="action_forgot_pass">Forgot password</string>
+    <string name="action_itso">You will be redirected your branch\'s ITSO.</string>
+
+    <string name="tip_qc">TIP Quezon City</string>
+    <string name="tip_mnl">TIP Manila</string>
 </resources>
