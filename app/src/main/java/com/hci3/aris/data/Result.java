@@ -23,7 +23,7 @@ public class Result<T> {
         return "";
     }
 
-    public final static class Success<T> extends Result<T> {
+    public static final class Success<T> extends Result<T> {
         private final T data;
 
         public Success(T data) {
@@ -35,7 +35,7 @@ public class Result<T> {
         }
     }
 
-    public final static class Error<T> extends Result<T> {
+    public static final class Error<T> extends Result<T> {
         private final Exception err;
 
         public Error(Exception error) {
