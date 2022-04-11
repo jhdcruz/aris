@@ -61,7 +61,7 @@ public class LoginActivity extends AppCompatActivity {
                 showLoginFailed(loginResult.getError());
             }
             if (loginResult.getSuccess() != null) {
-                showMainActivity(loginResult.getSuccess());
+                showLoginSuccess(loginResult.getSuccess());
             }
             setResult(Activity.RESULT_OK);
 
@@ -103,7 +103,7 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
-    private void showMainActivity(LoginUserState model) {
+    private void showLoginSuccess(LoginUserState model) {
         // Initiate successful logged in experience -> Home interface
         Intent intent = new Intent(LoginActivity.this,
                 MainActivity.class);

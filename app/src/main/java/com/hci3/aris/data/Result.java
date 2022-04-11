@@ -14,17 +14,16 @@ public class Result<T> {
     @Override
     public String toString() {
         if (this instanceof Result.Success) {
-            Result.Success success = (Result.Success) this;
+            Result.Success<T> success = (Result.Success<T>) this;
             return "Success[data=" + success.getData().toString() + "]";
         } else if (this instanceof Result.Error) {
-            Result.Error error = (Result.Error) this;
-            return "Error[exception=" + error.getError().toString() + "]";
+            Result.Error<T> error = (Result.Error<T>) this;
+            return "Error[exception=" + error.getErr().toString() + "]";
         }
         return "";
     }
 
-    // Success sub-class
-    public final static class Success<T> extends Result {
+    public final static class Success<T> extends Result<T> {
         private final T data;
 
         public Success(T data) {
@@ -36,16 +35,15 @@ public class Result<T> {
         }
     }
 
-    // Error sub-class
-    public final static class Error extends Result {
-        private final Exception error;
+    public final static class Error<T> extends Result<T> {
+        private final Exception err;
 
         public Error(Exception error) {
-            this.error = error;
+            this.err = error;
         }
 
-        public Exception getError() {
-            return this.error;
+        public Exception getErr() {
+            return this.err;
         }
     }
 }
