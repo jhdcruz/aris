@@ -107,10 +107,10 @@ public class LoginActivity extends AppCompatActivity {
         // Shows a dialog with that will redirect you to your branch's ITSO
         // if you forgot your password
         forgotButton.setOnClickListener(view -> {
-            String[] branches = {"TIP Manila", "TIP Quezon City"};
             MaterialAlertDialogBuilder dialog = new MaterialAlertDialogBuilder(this);
 
-            dialog.setItems(branches, null);
+            dialog.setMessage("A temporary password will be sent to your inputted username/email earlier...");
+
             dialog.setNegativeButton("Cancel", null);
             dialog.setPositiveButton("Proceed", null);
 
