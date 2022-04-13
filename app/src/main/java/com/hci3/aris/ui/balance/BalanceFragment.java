@@ -21,7 +21,6 @@ public class BalanceFragment extends Fragment {
     public static BalanceFragment newInstance() {
         return new BalanceFragment();
     }
-
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
