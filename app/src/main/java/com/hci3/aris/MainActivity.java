@@ -42,7 +42,12 @@ public class MainActivity extends AppCompatActivity {
 
         NavController navController = navHostFragment.getNavController();
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
-        NavigationUI.setupWithNavController(binding.navView, navController);
+
+        if (binding.navRailView != null) {
+            NavigationUI.setupWithNavController(binding.navRailView, navController);
+        } else {
+            NavigationUI.setupWithNavController(binding.navView, navController);
+        }
     }
 
     /* Add toolbar menu options */
