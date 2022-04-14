@@ -46,8 +46,18 @@ public class MainActivity extends AppCompatActivity {
         if (binding.navRailView != null) {
             NavigationUI.setupWithNavController(binding.navRailView, navController);
         } else {
+            assert binding.navView != null;
             NavigationUI.setupWithNavController(binding.navView, navController);
         }
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        NavHostFragment navHostFragment = (NavHostFragment) getSupportFragmentManager().findFragmentById(R.id.nav_host_fragment_activity_main);
+        assert navHostFragment != null;
+
+        NavController navController = navHostFragment.getNavController();
+        return navController.navigateUp() || super.onSupportNavigateUp();
     }
 
     /* Add toolbar menu options */
