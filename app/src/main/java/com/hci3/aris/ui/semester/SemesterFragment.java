@@ -1,11 +1,10 @@
-package com.hci3.aris.ui.grades;
+package com.hci3.aris.ui.semester;
 
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -13,7 +12,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.google.android.material.card.MaterialCardView;
 import com.hci3.aris.R;
 import com.hci3.aris.data.model.SemesterModel;
 
@@ -24,19 +22,12 @@ import java.util.List;
  * A fragment that lists semesters.
  */
 public class SemesterFragment extends Fragment {
+
     /**
      * Mandatory empty constructor for the fragment manager to instantiate the
      * fragment (e.g. upon screen orientation changes).
      */
     public SemesterFragment() {
-    }
-
-    @SuppressWarnings("unused")
-    public static SemesterFragment newInstance(int columnCount) {
-        SemesterFragment fragment = new SemesterFragment();
-        Bundle args = new Bundle();
-        fragment.setArguments(args);
-        return fragment;
     }
 
     @Override

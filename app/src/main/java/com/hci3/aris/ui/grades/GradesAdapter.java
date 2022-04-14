@@ -15,12 +15,12 @@ import com.hci3.aris.data.model.CourseModel;
 import java.util.List;
 
 
-public class CourseAdapter extends RecyclerView.Adapter<CourseAdapter.ViewHolder> {
+public class GradesAdapter extends RecyclerView.Adapter<GradesAdapter.ViewHolder> {
 
     private final List<CourseModel> courseModelArrayList;
 
     // Constructor
-    public CourseAdapter(Context context, List<CourseModel> courseModelArrayList) {
+    public GradesAdapter(Context context, List<CourseModel> courseModelArrayList) {
         this.courseModelArrayList = courseModelArrayList;
     }
 

@@ -1,0 +1,12 @@
+package com.hci3.aris.ui.grades;
+
+public class GradesDetailsFragment {
+
+    /**
+     * Mandatory empty constructor for the fragment manager to instantiate the
+     * fragment (e.g. upon screen orientation changes).
+     */
+    public GradesDetailsFragment() {
+    }
+
+}

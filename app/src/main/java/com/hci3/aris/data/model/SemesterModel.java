@@ -5,7 +5,7 @@ import java.util.Locale;
 public class SemesterModel {
 
     private String semester;
-    private String school_year;
+    private String schoolYear;
     private double semGpa;
     private int unitsEarned;
     private int unitsEnrolled;
@@ -14,7 +14,7 @@ public class SemesterModel {
     public SemesterModel(String semester, String schoolYear, double semGpa, int semUnits,
                          int semTotal, int courses) {
         this.semester = semester;
-        this.school_year = schoolYear;
+        this.schoolYear = schoolYear;
         this.semGpa = semGpa;
         this.unitsEarned = semUnits;
         this.unitsEnrolled = semTotal;
@@ -26,7 +26,7 @@ public class SemesterModel {
     }
 
     public String getSchoolYear() {
-        return school_year;
+        return schoolYear;
     }
 
     public double getSemGpa() {

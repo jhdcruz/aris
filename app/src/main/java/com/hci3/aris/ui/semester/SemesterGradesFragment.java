@@ -1,4 +1,4 @@
-package com.hci3.aris.ui.grades;
+package com.hci3.aris.ui.semester;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
@@ -14,21 +14,18 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.hci3.aris.R;
 import com.hci3.aris.data.model.CourseModel;
+import com.hci3.aris.ui.grades.GradesAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class SemesterGradesFragment extends Fragment {
 
+    /**
+     * Mandatory empty constructor for the fragment manager to instantiate the
+     * fragment (e.g. upon screen orientation changes).
+     */
     public SemesterGradesFragment() {
-    }
-
-    @SuppressWarnings("unused")
-    public static SemesterGradesFragment newInstance(int columnCount) {
-        SemesterGradesFragment fragment = new SemesterGradesFragment();
-        Bundle args = new Bundle();
-        fragment.setArguments(args);
-        return fragment;
     }
 
     @Override
@@ -55,7 +52,7 @@ public class SemesterGradesFragment extends Fragment {
         courseModelArray.add(new CourseModel("GEC 005", "Understanding The Self", 2, 82.32, 88.14, 86.23));
         courseModelArray.add(new CourseModel("GEC 001", "Purposive Communication", 3, 84.45, 82.48, 81.11));
 
-        CourseAdapter courseAdapter = new CourseAdapter(getContext(), courseModelArray);
+        GradesAdapter courseAdapter = new GradesAdapter(getContext(), courseModelArray);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
 
         RecyclerView recyclerView = view.findViewById(R.id.grades_list);

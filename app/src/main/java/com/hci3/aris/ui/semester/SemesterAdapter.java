@@ -1,11 +1,10 @@
-package com.hci3.aris.ui.grades;
+package com.hci3.aris.ui.semester;
 
 import androidx.annotation.NonNull;
 import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.annotation.SuppressLint;
-import android.content.ClipData;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;

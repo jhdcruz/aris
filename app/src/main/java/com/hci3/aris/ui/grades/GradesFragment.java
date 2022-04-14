@@ -24,15 +24,11 @@ import java.util.List;
 
 public class GradesFragment extends Fragment {
 
+    /**
+     * Mandatory empty constructor for the fragment manager to instantiate the
+     * fragment (e.g. upon screen orientation changes).
+     */
     public GradesFragment() {
-    }
-
-    @SuppressWarnings("unused")
-    public static GradesFragment newInstance(int columnCount) {
-        GradesFragment fragment = new GradesFragment();
-        Bundle args = new Bundle();
-        fragment.setArguments(args);
-        return fragment;
     }
 
     @Override
@@ -59,7 +55,7 @@ public class GradesFragment extends Fragment {
         courseModelArray.add(new CourseModel("GEC 005", "Understanding The Self", 2, 82.32, 88.14, 86.23));
         courseModelArray.add(new CourseModel("GEC 001", "Purposive Communication", 3, 84.45, 82.48, 81.11));
 
-        CourseAdapter courseAdapter = new CourseAdapter(getContext(), courseModelArray);
+        GradesAdapter courseAdapter = new GradesAdapter(getContext(), courseModelArray);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
 
         RecyclerView recyclerView = view.findViewById(R.id.grades_list);

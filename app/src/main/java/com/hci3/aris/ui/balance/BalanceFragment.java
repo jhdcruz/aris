@@ -1,7 +1,5 @@
 package com.hci3.aris.ui.balance;
 
-import androidx.lifecycle.ViewModelProvider;
-
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -16,11 +14,13 @@ import com.hci3.aris.R;
 
 public class BalanceFragment extends Fragment {
 
-    private BalanceViewModel mViewModel;
-
-    public static BalanceFragment newInstance() {
-        return new BalanceFragment();
+    /**
+     * Mandatory empty constructor for the fragment manager to instantiate the
+     * fragment (e.g. upon screen orientation changes).
+     */
+    public BalanceFragment() {
     }
+
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
@@ -30,7 +30,6 @@ public class BalanceFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        mViewModel = new ViewModelProvider(this).get(BalanceViewModel.class);
     }
 
 }
