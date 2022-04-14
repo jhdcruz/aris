@@ -2,34 +2,30 @@ package com.hci3.aris.ui.grades;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Button;
-
-import com.google.android.material.textview.MaterialTextView;
 import com.hci3.aris.R;
 import com.hci3.aris.data.model.CourseModel;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class GradesFragment extends Fragment {
+public class SemesterGradesFragment extends Fragment {
 
-    public GradesFragment() {
+    public SemesterGradesFragment() {
     }
 
     @SuppressWarnings("unused")
-    public static GradesFragment newInstance(int columnCount) {
-        GradesFragment fragment = new GradesFragment();
+    public static SemesterGradesFragment newInstance(int columnCount) {
+        SemesterGradesFragment fragment = new SemesterGradesFragment();
         Bundle args = new Bundle();
         fragment.setArguments(args);
         return fragment;
@@ -43,7 +39,7 @@ public class GradesFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_grades, container, false);
+        return inflater.inflate(R.layout.fragment_grades_list, container, false);
     }
 
     @SuppressLint("SetTextI18n")
@@ -65,14 +61,5 @@ public class GradesFragment extends Fragment {
         RecyclerView recyclerView = view.findViewById(R.id.grades_list);
         recyclerView.setLayoutManager(linearLayoutManager);
         recyclerView.setAdapter(courseAdapter);
-
-        MaterialTextView enrolledCourses = view.findViewById(R.id.enrolled_courses);
-        enrolledCourses.setText("(" + courseModelArray.size() + ")");
-
-        Button viewAll = view.findViewById(R.id.courses_view_all);
-        viewAll.setOnClickListener(l ->
-                Navigation.findNavController(l).navigate(R.id.action_navigation_grades_to_subnav_semester)
-        );
     }
-
 }

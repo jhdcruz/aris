@@ -1,10 +1,5 @@
 package com.hci3.aris.data.model;
 
-
-import android.annotation.SuppressLint;
-
-import androidx.annotation.Nullable;
-
 import java.util.Locale;
 
 public class CourseModel {

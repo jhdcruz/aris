@@ -9,21 +9,57 @@
         android:id="@+id/navigation_profile"
         android:name="com.hci3.aris.ui.profile.ProfileFragment"
         android:label="@string/title_profile"
-        tools:layout="@layout/fragment_profile"/>
-    <fragment
-        android:id="@+id/navigation_grades"
-        android:name="com.hci3.aris.ui.grades.GradesFragment"
-        android:label="@string/title_grades"
-        tools:layout="@layout/fragment_grades"/>
+        tools:layout="@layout/fragment_profile" />
     <fragment
         android:id="@+id/navigation_schedule"
         android:name="com.hci3.aris.ui.schedule.ScheduleFragment"
         android:label="@string/title_schedule"
-        tools:layout="@layout/fragment_schedule"/>
+        tools:layout="@layout/fragment_schedule" />
     <fragment
         android:id="@+id/navigation_balance"
         android:name="com.hci3.aris.ui.balance.BalanceFragment"
         android:label="@string/title_balance"
-        tools:layout="@layout/fragment_balance"/>
+        tools:layout="@layout/fragment_balance" />
+
+    <navigation
+        android:id="@+id/navigation_grades_graph"
+        app:startDestination="@id/navigation_grades">
+
+        <fragment
+            android:id="@+id/navigation_grades"
+            android:name="com.hci3.aris.ui.grades.GradesFragment"
+            android:label="@string/title_grades"
+            tools:layout="@layout/fragment_grades">
+            <action
+                android:id="@+id/action_navigation_grades_to_subnav_semester"
+                app:destination="@id/subnav_semester"
+                app:enterAnim="@anim/nav_default_enter_anim"
+                app:exitAnim="@anim/nav_default_exit_anim"
+                app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+                app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        </fragment>
+
+        <fragment
+            android:id="@+id/subnav_semester"
+            android:name="com.hci3.aris.ui.grades.SemesterFragment"
+            android:label="Semesters"
+            tools:layout="@layout/fragment_semester">
+            <action
+                android:id="@+id/action_subnav_semester_to_subnav_grade_list"
+                app:destination="@id/subnav_grade_list"
+                app:enterAnim="@anim/nav_default_enter_anim"
+                app:exitAnim="@anim/nav_default_exit_anim"
+                app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+                app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        </fragment>
+
+        <fragment
+            android:id="@+id/subnav_grade_list"
+            android:name="com.hci3.aris.ui.grades.SemesterGradesFragment"
+            android:label="Semestral Grades"
+            tools:layout="@layout/fragment_grades_list" />
+
+
+    </navigation>
 
 </navigation>
