@@ -1,5 +1,7 @@
 package com.hci3.aris.adapter;
 
+import android.content.Context;
+
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
@@ -12,14 +14,16 @@ import com.hci3.aris.ui.balance.Scholarship_fragment3;
 
 public class BalanceAdapter extends FragmentStateAdapter {
 
-    private final String[] titles = new String[]{"Balance", "Enrollment", "Scholarship"};
+    Context ctx;
+    int totalTabs;
 
-    public BalanceAdapter(@NonNull BalanceFragment fragmentActivity) {
-        super(fragmentActivity);
+    public BalanceAdapter(Context context, BalanceFragment fragment, int totalTabs) {
+        super(fragment);
+        this.ctx = context;
+        this.totalTabs = totalTabs;
     }
 
     @NonNull
-    @Override
     public Fragment createFragment(int position) {
         switch (position) {
             case 0:
@@ -30,8 +34,8 @@ public class BalanceAdapter extends FragmentStateAdapter {
                 return new Scholarship_fragment3();
         }
     }
-    @Override
+
     public int getItemCount() {
-        return titles.length;
+        return totalTabs;
     }
 }

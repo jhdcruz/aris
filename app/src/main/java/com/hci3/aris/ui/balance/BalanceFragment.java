@@ -18,6 +18,9 @@ import com.google.android.material.tabs.TabLayoutMediator;
 import com.hci3.aris.R;
 import com.hci3.aris.adapter.BalanceAdapter;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class BalanceFragment extends Fragment {
 
     private BalanceViewModel mViewModel;
@@ -38,17 +41,20 @@ public class BalanceFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         mViewModel = new ViewModelProvider(this).get(BalanceViewModel.class);
 
-        String[] titles = new String[]{"Balance", "Enrollment", "Scholarship"};
-        TabLayout tabLayout;
-        ViewPager2 viewPager2;
+        List<String> titles = new ArrayList<>();
+        titles.add("Balance");
+        titles.add("Enrollment");
+        titles.add("Scholarship");
 
-        tabLayout = getView().findViewById(R.id.tabBar);
-        viewPager2 = getView().findViewById(R.id.viewPager);
 
-        BalanceAdapter adapter = new BalanceAdapter(this);
+        TabLayout tabLayout = view.findViewById(R.id.tabBar);
+        ViewPager2 viewPager2 = view.findViewById(R.id.viewPager);
+
+        BalanceAdapter adapter = new BalanceAdapter(getContext(), this , tabLayout.getTabCount());
         viewPager2.setAdapter(adapter);
 
-        new TabLayoutMediator(tabLayout, viewPager2,((tab, position) ->
-                tab.setText(titles[position]))).attach();
+        new TabLayoutMediator(tabLayout, viewPager2, (TabLayout.Tab tab, int position) ->
+                tab.setText(titles.get(position))).attach();
+
     }
 }
