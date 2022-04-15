@@ -37,6 +37,13 @@
                 app:exitAnim="@anim/nav_default_exit_anim"
                 app:popEnterAnim="@anim/nav_default_pop_enter_anim"
                 app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+            <action
+                android:id="@+id/action_navigation_grades_to_subnav_grade_details_list"
+                app:destination="@id/subnav_grade_details_list"
+                app:enterAnim="@anim/nav_default_enter_anim"
+                app:exitAnim="@anim/nav_default_exit_anim"
+                app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+                app:popExitAnim="@anim/nav_default_pop_exit_anim" />
         </fragment>
 
         <fragment
@@ -59,6 +66,11 @@
             android:label="Semestral Grades"
             tools:layout="@layout/fragment_grades_list" />
 
+        <fragment
+            android:id="@+id/subnav_grade_details_list"
+            android:name="com.hci3.aris.ui.grades.GradeDetailsFragment"
+            android:label="Grade Details"
+            tools:layout="@layout/fragment_grade_details_list" />
 
     </navigation>
 

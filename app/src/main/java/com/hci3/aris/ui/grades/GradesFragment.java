@@ -18,9 +18,6 @@ import android.widget.Button;
 import com.google.android.material.textview.MaterialTextView;
 import com.hci3.aris.R;
 import com.hci3.aris.data.CourseDataSource;
-import com.hci3.aris.data.model.CourseModel;
-
-import java.util.List;
 
 public class GradesFragment extends Fragment {
 

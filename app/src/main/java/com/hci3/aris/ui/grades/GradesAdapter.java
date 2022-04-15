@@ -4,9 +4,11 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.hci3.aris.R;
@@ -77,6 +79,11 @@ public class GradesAdapter extends RecyclerView.Adapter<GradesAdapter.ViewHolder
             gradePrelim = itemView.findViewById(R.id.prelim_grade);
             gradeMidterm = itemView.findViewById(R.id.midterm_grade);
             gradeFinal = itemView.findViewById(R.id.finals_grade);
+
+            Button gradeDetails = itemView.findViewById(R.id.grade_details);
+            gradeDetails.setOnClickListener(l ->
+                    Navigation.findNavController(l).navigate(R.id.action_navigation_grades_to_subnav_grade_details_list)
+            );
         }
     }
 }
