@@ -17,14 +17,14 @@ import android.widget.Button;
 
 import com.google.android.material.textview.MaterialTextView;
 import com.hci3.aris.R;
+import com.hci3.aris.data.CourseDataSource;
 import com.hci3.aris.data.model.CourseModel;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class GradesFragment extends Fragment {
 
-    /**
+    /*
      * Mandatory empty constructor for the fragment manager to instantiate the
      * fragment (e.g. upon screen orientation changes).
      */
@@ -47,15 +47,9 @@ public class GradesFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        List<CourseModel> courseModelArray = new ArrayList<>();
+        CourseDataSource dataSource = new CourseDataSource();
 
-        // Course data
-        courseModelArray.add(new CourseModel("CITE 012", "Introduction to HCI", 3, 78.25, 88.09, 86.00));
-        courseModelArray.add(new CourseModel("CITE 003", "Computer Programming 3", 3, 92.25, 91.04, 98.00));
-        courseModelArray.add(new CourseModel("GEC 005", "Understanding The Self", 2, 82.32, 88.14, 86.23));
-        courseModelArray.add(new CourseModel("GEC 001", "Purposive Communication", 3, 84.45, 82.48, 81.11));
-
-        GradesAdapter courseAdapter = new GradesAdapter(getContext(), courseModelArray);
+        GradesAdapter courseAdapter = new GradesAdapter(getContext(), dataSource.getCourses());
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
 
         RecyclerView recyclerView = view.findViewById(R.id.grades_list);
@@ -63,7 +57,7 @@ public class GradesFragment extends Fragment {
         recyclerView.setAdapter(courseAdapter);
 
         MaterialTextView enrolledCourses = view.findViewById(R.id.enrolled_courses);
-        enrolledCourses.setText("(" + courseModelArray.size() + ")");
+        enrolledCourses.setText("(" + courseAdapter.getItemCount() + ")");
 
         Button viewAll = view.findViewById(R.id.courses_view_all);
         viewAll.setOnClickListener(l ->
