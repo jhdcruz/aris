@@ -16,10 +16,11 @@ import com.hci3.aris.R;
 
 public class ScheduleFragment extends Fragment {
 
-    private ScheduleViewModel mViewModel;
-
-    public static ScheduleFragment newInstance() {
-        return new ScheduleFragment();
+    /**
+     * Mandatory empty constructor for the fragment manager to instantiate the
+     * fragment (e.g. upon screen orientation changes).
+     */
+    public ScheduleFragment() {
     }
 
     @Override
@@ -31,7 +32,6 @@ public class ScheduleFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        mViewModel = new ViewModelProvider(this).get(ScheduleViewModel.class);
     }
 
 }
