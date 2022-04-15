@@ -1,39 +1,41 @@
-package com.hci3.aris.adapter;
+package com.hci3.aris.ui.grades;
 
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.hci3.aris.R;
 import com.hci3.aris.data.model.CourseModel;
 
-import java.util.ArrayList;
+import java.util.List;
 
 
-public class CourseAdapter extends RecyclerView.Adapter<CourseAdapter.Viewholder> {
+public class GradesAdapter extends RecyclerView.Adapter<GradesAdapter.ViewHolder> {
 
-    private final ArrayList<CourseModel> courseModelArrayList;
+    private final List<CourseModel> courseModelArrayList;
 
     // Constructor
-    public CourseAdapter(Context context, ArrayList<CourseModel> courseModelArrayList) {
+    public GradesAdapter(Context context, List<CourseModel> courseModelArrayList) {
         this.courseModelArrayList = courseModelArrayList;
     }
 
     @NonNull
     @Override
-    public CourseAdapter.Viewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         // to inflate the layout for each item of recycler view.
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.layout_course, parent, false);
-        return new Viewholder(view);
+        return new ViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull CourseAdapter.Viewholder holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         // to set data to textview
         CourseModel model = courseModelArrayList.get(position);
         holder.courseCode.setText(model.getCourseCode());
@@ -56,7 +58,7 @@ public class CourseAdapter extends RecyclerView.Adapter<CourseAdapter.Viewholder
 
     // View holder class for initializing of
     // your views such as TextView and Imageview.
-    public static class Viewholder extends RecyclerView.ViewHolder {
+    public static class ViewHolder extends RecyclerView.ViewHolder {
         private final TextView courseCode;
         private final TextView courseName;
         private final TextView courseUnits;
@@ -65,7 +67,7 @@ public class CourseAdapter extends RecyclerView.Adapter<CourseAdapter.Viewholder
         private final TextView gradeMidterm;
         private final TextView gradeFinal;
 
-        public Viewholder(@NonNull View itemView) {
+        public ViewHolder(@NonNull View itemView) {
             super(itemView);
             // Course details
             courseCode = itemView.findViewById(R.id.course_code);
@@ -77,6 +79,11 @@ public class CourseAdapter extends RecyclerView.Adapter<CourseAdapter.Viewholder
             gradePrelim = itemView.findViewById(R.id.prelim_grade);
             gradeMidterm = itemView.findViewById(R.id.midterm_grade);
             gradeFinal = itemView.findViewById(R.id.finals_grade);
+
+            Button gradeDetails = itemView.findViewById(R.id.grade_details);
+            gradeDetails.setOnClickListener(l ->
+                    Navigation.findNavController(l).navigate(R.id.action_navigation_grades_to_subnav_grade_details_list)
+            );
         }
     }
 }

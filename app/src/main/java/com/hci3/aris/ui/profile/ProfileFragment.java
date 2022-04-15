@@ -16,10 +16,11 @@ import com.hci3.aris.R;
 
 public class ProfileFragment extends Fragment {
 
-    private ProfileViewModel mViewModel;
-
-    public static ProfileFragment newInstance() {
-        return new ProfileFragment();
+    /**
+     * Mandatory empty constructor for the fragment manager to instantiate the
+     * fragment (e.g. upon screen orientation changes).
+     */
+    public ProfileFragment() {
     }
 
     @Override
@@ -31,6 +32,5 @@ public class ProfileFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        mViewModel = new ViewModelProvider(this).get(ProfileViewModel.class);
     }
 }
