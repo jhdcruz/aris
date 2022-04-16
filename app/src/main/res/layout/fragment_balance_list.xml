@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".ui.balance.BalanceTabView">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/balance_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true"
+            app:layoutManager="LinearLayoutManager"
+            tools:listitem="@layout/component_card_balance" />
+
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/balance_pay_fab"
+        style="@style/Widget.Material3.FloatingActionButton.Primary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:backgroundTint="@color/primary"
+        android:text="Pay"
+        android:textColor="@color/black_matte"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:icon="@drawable/ic_baseline_payment_24"
+        app:iconPadding="6dp"
+        app:iconTint="@color/black_matte"
+        tools:ignore="HardcodedText" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
