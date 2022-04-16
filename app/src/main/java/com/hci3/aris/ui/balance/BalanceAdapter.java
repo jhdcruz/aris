@@ -1,4 +1,4 @@
-package com.hci3.aris.adapter;
+package com.hci3.aris.ui.balance;
 
 import android.content.Context;
 

@@ -14,7 +14,6 @@ import android.view.ViewGroup;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
 import com.hci3.aris.R;
-import com.hci3.aris.adapter.BalanceAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
