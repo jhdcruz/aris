@@ -6,9 +6,9 @@
     android:layout_height="match_parent"
     tools:context=".ui.balance.Balance_fragment1">
 
-    <ScrollView
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -535,7 +535,6 @@
                 android:textSize="18sp" />
 
         </LinearLayout>
-    </ScrollView>
-
+    </androidx.core.widget.NestedScrollView>
 
 </LinearLayout>
