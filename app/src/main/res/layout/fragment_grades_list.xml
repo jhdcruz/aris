@@ -16,6 +16,6 @@
         android:layout_height="wrap_content"
         android:fillViewport="true"
         app:layoutManager="LinearLayoutManager"
-        tools:listitem="@layout/layout_course" />
+        tools:listitem="@layout/component_card_grade" />
 
 </androidx.core.widget.NestedScrollView>

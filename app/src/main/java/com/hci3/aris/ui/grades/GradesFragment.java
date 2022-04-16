@@ -46,7 +46,7 @@ public class GradesFragment extends Fragment {
 
         CourseDataSource dataSource = new CourseDataSource();
 
-        GradesAdapter courseAdapter = new GradesAdapter(getContext(), dataSource.getCourses());
+        GradesRecyclerAdapter courseAdapter = new GradesRecyclerAdapter(getContext(), dataSource.getCourses());
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
 
         RecyclerView recyclerView = view.findViewById(R.id.grades_list);

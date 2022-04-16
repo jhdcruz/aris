@@ -17,12 +17,12 @@ import com.hci3.aris.data.model.CourseModel;
 import java.util.List;
 
 
-public class GradesAdapter extends RecyclerView.Adapter<GradesAdapter.ViewHolder> {
+public class GradesRecyclerAdapter extends RecyclerView.Adapter<GradesRecyclerAdapter.ViewHolder> {
 
     private final List<CourseModel> courseModelArrayList;
 
     // Constructor
-    public GradesAdapter(Context context, List<CourseModel> courseModelArrayList) {
+    public GradesRecyclerAdapter(Context context, List<CourseModel> courseModelArrayList) {
         this.courseModelArrayList = courseModelArrayList;
     }
 
@@ -30,7 +30,7 @@ public class GradesAdapter extends RecyclerView.Adapter<GradesAdapter.ViewHolder
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         // to inflate the layout for each item of recycler view.
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.layout_course, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.component_card_grade, parent, false);
         return new ViewHolder(view);
     }
 

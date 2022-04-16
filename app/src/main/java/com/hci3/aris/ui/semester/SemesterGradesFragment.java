@@ -14,11 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.hci3.aris.R;
 import com.hci3.aris.data.CourseDataSource;
-import com.hci3.aris.data.model.CourseModel;
-import com.hci3.aris.ui.grades.GradesAdapter;
-
-import java.util.ArrayList;
-import java.util.List;
+import com.hci3.aris.ui.grades.GradesRecyclerAdapter;
 
 public class SemesterGradesFragment extends Fragment {
 
@@ -47,7 +43,7 @@ public class SemesterGradesFragment extends Fragment {
 
         CourseDataSource dataSource = new CourseDataSource();
 
-        GradesAdapter courseAdapter = new GradesAdapter(getContext(), dataSource.getCourses());
+        GradesRecyclerAdapter courseAdapter = new GradesRecyclerAdapter(getContext(), dataSource.getCourses());
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
 
         RecyclerView recyclerView = view.findViewById(R.id.grades_list);
