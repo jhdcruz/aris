@@ -5,15 +5,14 @@ import java.util.Locale;
 public class CourseModel {
 
     // Course Details
-    private String courseCode;
-    private String courseName;
-    private String courseGpa;
-    private int courseUnits;
+    private final String courseCode;
+    private final String courseName;
+    private final int courseUnits;
 
     // Course Grades
-    private double gradePrelim;
-    private double gradeMidterm;
-    private double gradeFinal;
+    private final double gradePrelim;
+    private final double gradeMidterm;
+    private final double gradeFinal;
 
     // Constructor
     public CourseModel(String courseCode, String courseName, int courseUnits,
@@ -21,7 +20,7 @@ public class CourseModel {
         this.courseCode = courseCode;
         this.courseName = courseName;
         this.courseUnits = courseUnits;
-        this.courseGpa = getCourseGpa();
+        String courseGpa = getCourseGpa();
         this.gradePrelim = gradePrelim;
         this.gradeMidterm = gradeMidterm;
         this.gradeFinal = gradeFinal;
@@ -45,41 +44,15 @@ public class CourseModel {
         return String.format(Locale.ENGLISH, "%.2f", gpa);
     }
 
-    public double getGradePrelim() {
-        return gradePrelim;
+    public String getGradePrelim() {
+        return String.format(Locale.ENGLISH, "%.2f", gradePrelim);
     }
 
-    public double getGradeMidterm() {
-        return gradeMidterm;
+    public String getGradeMidterm() {
+        return String.format(Locale.ENGLISH, "%.2f", gradeMidterm);
     }
 
-    public double getGradeFinal() {
-        return gradeFinal;
+    public String getGradeFinal() {
+        return String.format(Locale.ENGLISH, "%.2f", gradeFinal);
     }
-
-    // Setters
-    public void setCourseCode(String courseCode) {
-        this.courseCode = courseCode;
-    }
-
-    public void setCourseName(String courseName) {
-        this.courseName = courseName;
-    }
-
-    public void setCourseUnits(int courseUnits) {
-        this.courseUnits = courseUnits;
-    }
-
-    public void setGradePrelim(double gradePrelim) {
-        this.gradePrelim = gradePrelim;
-    }
-
-    public void setGradeMidterm(double gradeMidterm) {
-        this.gradeMidterm = gradeMidterm;
-    }
-
-    public void setGradeFinal(double gradeFinal) {
-        this.gradeFinal = gradeFinal;
-    }
-
 }

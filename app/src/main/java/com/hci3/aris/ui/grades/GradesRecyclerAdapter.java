@@ -38,14 +38,15 @@ public class GradesRecyclerAdapter extends RecyclerView.Adapter<GradesRecyclerAd
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         // to set data to textview
         CourseModel model = courseModelArrayList.get(position);
+
         holder.courseCode.setText(model.getCourseCode());
         holder.courseName.setText(model.getCourseName());
-        holder.courseUnits.setText(String.valueOf(model.getCourseUnits()));
-        holder.courseGpa.setText(String.valueOf(model.getCourseGpa()));
+        holder.courseUnits.setText(String.valueOf((model.getCourseUnits())));
+        holder.courseGpa.setText(model.getCourseGpa());
 
-        holder.gradePrelim.setText(String.valueOf(model.getGradePrelim()));
-        holder.gradeMidterm.setText(String.valueOf(model.getGradeMidterm()));
-        holder.gradeFinal.setText(String.valueOf(model.getGradeFinal()));
+        holder.gradePrelim.setText(model.getGradePrelim());
+        holder.gradeMidterm.setText(model.getGradeMidterm());
+        holder.gradeFinal.setText(model.getGradeFinal());
     }
 
     /**
