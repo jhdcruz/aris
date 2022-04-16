@@ -9,8 +9,6 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -18,14 +16,11 @@ import com.hci3.aris.R;
 
 public class ScheduleFragment extends Fragment {
 
-    private ScheduleViewModel mViewModel;
+    public ScheduleFragment() {
 
-    public static ScheduleFragment newInstance() {
-        return new ScheduleFragment();
     }
 
     @Override
-
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_schedule, container, false);
@@ -34,8 +29,6 @@ public class ScheduleFragment extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        mViewModel = new ViewModelProvider(this).get(ScheduleViewModel.class);
-        // TODO: Use the ViewModel
     }
 
 }
