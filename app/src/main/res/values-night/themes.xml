@@ -3,11 +3,10 @@
     <style name="Theme.ARIS" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/primary</item>
-        <item name="colorSurface">@color/material_dynamic_neutral30</item>
-        <item name="colorSecondaryContainer">@color/primary</item>
-        <item name="colorOnSecondaryContainer">@color/black_matte</item>
         <item name="colorOnPrimary">@color/black</item>
         <item name="colorOnSecondary">@color/white</item>
+        <item name="colorSecondaryContainer">@color/primary_light</item>
+        <item name="colorOnSecondaryContainer">@color/black_matte</item>
         <item name="android:statusBarColor" tools:targetApi="l">@color/primary</item>
     </style>
 </resources>

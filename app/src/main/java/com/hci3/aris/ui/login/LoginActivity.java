@@ -19,19 +19,20 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.hci3.aris.MainActivity;
 import com.hci3.aris.databinding.ActivityLoginBinding;
 
 public class LoginActivity extends AppCompatActivity {
 
     private LoginViewModel loginViewModel;
-    private ActivityLoginBinding binding;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
 
-        binding = ActivityLoginBinding.inflate(getLayoutInflater());
+        ActivityLoginBinding binding = ActivityLoginBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
         loginViewModel = new ViewModelProvider(this, new LoginViewModelFactory())
@@ -40,6 +41,7 @@ public class LoginActivity extends AppCompatActivity {
         final EditText usernameEditText = binding.username;
         final EditText passwordEditText = binding.password;
         final Button loginButton = binding.login;
+        final Button forgotButton = binding.forgotPassword;
         final ProgressBar loadingProgressBar = binding.loading;
 
         // Login form validator
@@ -61,7 +63,7 @@ public class LoginActivity extends AppCompatActivity {
                 showLoginFailed(loginResult.getError());
             }
             if (loginResult.getSuccess() != null) {
-                showMainActivity(loginResult.getSuccess());
+                showLoginSuccess(loginResult.getSuccess());
             }
             setResult(Activity.RESULT_OK);
 
@@ -101,9 +103,22 @@ public class LoginActivity extends AppCompatActivity {
             loginViewModel.login(usernameEditText.getText().toString(),
                     passwordEditText.getText().toString());
         });
+
+        // Shows a dialog with that will redirect you to your branch's ITSO
+        // if you forgot your password
+        forgotButton.setOnClickListener(view -> {
+            MaterialAlertDialogBuilder dialog = new MaterialAlertDialogBuilder(this);
+
+            dialog.setMessage("A temporary password will be sent to your inputted username/email earlier...");
+
+            dialog.setNegativeButton("Cancel", null);
+            dialog.setPositiveButton("Proceed", null);
+
+            dialog.show();
+        });
     }
 
-    private void showMainActivity(LoginUserState model) {
+    private void showLoginSuccess(LoginUserState model) {
         // Initiate successful logged in experience -> Home interface
         Intent intent = new Intent(LoginActivity.this,
                 MainActivity.class);
