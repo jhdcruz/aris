@@ -6,142 +6,143 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <androidx.core.widget.NestedScrollView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingVertical="16dp">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:paddingVertical="16dp">
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_weight="1"
                 android:gravity="center"
                 android:orientation="horizontal">
 
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="20dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="horizontal">
+                    android:orientation="vertical">
 
-                    <LinearLayout
-                        android:layout_width="wrap_content"
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                        android:layout_weight="1"
+                        android:text="Exam"
+                        android:textAlignment="center"
+                        android:textAllCaps="false"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="Exam"
-                            android:textAlignment="center"
-                            android:textAllCaps="false"
-                            android:textSize="16sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="80.00"
-                            android:textAlignment="center"
-                            android:textColor="@color/primary"
-                            android:textSize="20sp"
-                            android:textStyle="bold" />
-
-                    </LinearLayout>
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="80.00"
+                        android:textAlignment="center"
+                        android:textColor="@color/primary"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
 
                 </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="20dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="horizontal">
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="Standing"
-                            android:textAlignment="center"
-                            android:textAllCaps="false"
-                            android:textSize="16sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="80.00"
-                            android:textAlignment="center"
-                            android:textColor="@color/primary"
-                            android:textSize="20sp"
-                            android:textStyle="bold" />
-
-                    </LinearLayout>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="20dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="horizontal">
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:id="@+id/textView19"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="Grade"
-                            android:textAlignment="center"
-                            android:textAllCaps="false"
-                            android:textSize="16sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:id="@+id/textView20"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="80.00"
-                            android:textAlignment="center"
-                            android:textColor="@color/primary"
-                            android:textSize="20sp"
-                            android:textStyle="bold" />
-                    </LinearLayout>
-
-                </LinearLayout>
             </LinearLayout>
 
-
-            <View
-                android:id="@+id/divider7"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="3dp"
-                android:layout_margin="12dp"
-                android:background="?android:attr/listDivider" />
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/textView19"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Grade"
+                        android:textAlignment="center"
+                        android:textAllCaps="false"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/textView20"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="80.00"
+                        android:textAlignment="center"
+                        android:textColor="@color/primary"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Standing"
+                        android:textAlignment="center"
+                        android:textAllCaps="false"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="80.00"
+                        android:textAlignment="center"
+                        android:textColor="@color/primary"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <View
+            android:id="@+id/divider7"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_marginTop="12dp"
+            android:background="?android:attr/listDivider" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
             <com.google.android.material.card.MaterialCardView
                 style="@style/Widget.Material3.CardView.Elevated"
@@ -162,7 +163,7 @@
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
 
-                        <TextView
+                        <com.google.android.material.textview.MaterialTextView
                             android:id="@+id/textView6"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -174,7 +175,7 @@
                             android:textSize="16sp"
                             android:textStyle="bold" />
 
-                        <TextView
+                        <com.google.android.material.textview.MaterialTextView
                             android:id="@+id/textView14"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -207,7 +208,7 @@
                             android:layout_weight="1"
                             android:orientation="vertical">
 
-                            <TextView
+                            <com.google.android.material.textview.MaterialTextView
                                 android:id="@+id/textView15"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -215,14 +216,14 @@
                                 android:textAlignment="viewStart"
                                 android:textStyle="bold" />
 
-                            <TextView
+                            <com.google.android.material.textview.MaterialTextView
                                 android:id="@+id/textView18"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="10/20" />
                         </LinearLayout>
 
-                        <TextView
+                        <com.google.android.material.textview.MaterialTextView
                             android:id="@+id/textView17"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -245,20 +246,20 @@
                             android:layout_weight="1"
                             android:orientation="vertical">
 
-                            <TextView
+                            <com.google.android.material.textview.MaterialTextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Evaluating Texts"
                                 android:textAlignment="viewStart"
                                 android:textStyle="bold" />
 
-                            <TextView
+                            <com.google.android.material.textview.MaterialTextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="20/20" />
                         </LinearLayout>
 
-                        <TextView
+                        <com.google.android.material.textview.MaterialTextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -292,7 +293,7 @@
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
 
-                        <TextView
+                        <com.google.android.material.textview.MaterialTextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -303,7 +304,7 @@
                             android:textSize="16sp"
                             android:textStyle="bold" />
 
-                        <TextView
+                        <com.google.android.material.textview.MaterialTextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -334,20 +335,20 @@
                             android:layout_weight="1"
                             android:orientation="vertical">
 
-                            <TextView
+                            <com.google.android.material.textview.MaterialTextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Storing Data"
                                 android:textAlignment="viewStart"
                                 android:textStyle="bold" />
 
-                            <TextView
+                            <com.google.android.material.textview.MaterialTextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="10/20" />
                         </LinearLayout>
 
-                        <TextView
+                        <com.google.android.material.textview.MaterialTextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -369,20 +370,20 @@
                             android:layout_weight="1"
                             android:orientation="vertical">
 
-                            <TextView
+                            <com.google.android.material.textview.MaterialTextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Filtering Data"
                                 android:textAlignment="viewStart"
                                 android:textStyle="bold" />
 
-                            <TextView
+                            <com.google.android.material.textview.MaterialTextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="20/20" />
                         </LinearLayout>
 
-                        <TextView
+                        <com.google.android.material.textview.MaterialTextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -416,7 +417,7 @@
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
 
-                        <TextView
+                        <com.google.android.material.textview.MaterialTextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -427,7 +428,7 @@
                             android:textSize="16sp"
                             android:textStyle="bold" />
 
-                        <TextView
+                        <com.google.android.material.textview.MaterialTextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -458,20 +459,20 @@
                             android:layout_weight="1"
                             android:orientation="vertical">
 
-                            <TextView
+                            <com.google.android.material.textview.MaterialTextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Storing/filtering Data"
                                 android:textAlignment="viewStart"
                                 android:textStyle="bold" />
 
-                            <TextView
+                            <com.google.android.material.textview.MaterialTextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="10/20" />
                         </LinearLayout>
 
-                        <TextView
+                        <com.google.android.material.textview.MaterialTextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -493,20 +494,20 @@
                             android:layout_weight="1"
                             android:orientation="vertical">
 
-                            <TextView
+                            <com.google.android.material.textview.MaterialTextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Evaluating Content"
                                 android:textAlignment="viewStart"
                                 android:textStyle="bold" />
 
-                            <TextView
+                            <com.google.android.material.textview.MaterialTextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="20/20" />
                         </LinearLayout>
 
-                        <TextView
+                        <com.google.android.material.textview.MaterialTextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -539,7 +540,7 @@
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
 
-                        <TextView
+                        <com.google.android.material.textview.MaterialTextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -550,7 +551,7 @@
                             android:textSize="16sp"
                             android:textStyle="bold" />
 
-                        <TextView
+                        <com.google.android.material.textview.MaterialTextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -581,20 +582,20 @@
                             android:layout_weight="1"
                             android:orientation="vertical">
 
-                            <TextView
+                            <com.google.android.material.textview.MaterialTextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Session 1 Recitation"
                                 android:textAlignment="viewStart"
                                 android:textStyle="bold" />
 
-                            <TextView
+                            <com.google.android.material.textview.MaterialTextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="10/20" />
                         </LinearLayout>
 
-                        <TextView
+                        <com.google.android.material.textview.MaterialTextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -616,20 +617,20 @@
                             android:layout_weight="1"
                             android:orientation="vertical">
 
-                            <TextView
+                            <com.google.android.material.textview.MaterialTextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Session 2 Breakout Rooms"
                                 android:textAlignment="viewStart"
                                 android:textStyle="bold" />
 
-                            <TextView
+                            <com.google.android.material.textview.MaterialTextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="20/20" />
                         </LinearLayout>
 
-                        <TextView
+                        <com.google.android.material.textview.MaterialTextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -643,9 +644,10 @@
 
             </com.google.android.material.card.MaterialCardView>
 
+        </androidx.core.widget.NestedScrollView>
 
-        </LinearLayout>
-    </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+
 
     <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
         style="@style/Widget.Material3.FloatingActionButton.Primary"

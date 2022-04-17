@@ -47,13 +47,14 @@ public class SemesterFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         List<SemesterModel> semesterModelArray = new ArrayList<>();
-        RecyclerView listRecyclerView = view.findViewById(R.id.semester_list);
-        RecyclerView gridRecyclerView = view.findViewById(R.id.semester_grid);
 
         semesterModelArray.add(new SemesterModel("1st Sem", "2021-2022", 1.54, 20, 20, 8));
         semesterModelArray.add(new SemesterModel("2nd Sem", "2021-2022", 1.40, 18, 18, 7));
         semesterModelArray.add(new SemesterModel("1st Sem", "2020-2021", 1.34, 20, 20, 9));
         semesterModelArray.add(new SemesterModel("2nd Sem", "2020-2021", 1.20, 20, 18, 8));
+
+        RecyclerView listRecyclerView = view.findViewById(R.id.semester_list);
+        RecyclerView gridRecyclerView = view.findViewById(R.id.semester_grid);
 
         SemesterAdapter semesterAdapter = new SemesterAdapter(getContext(), semesterModelArray);
 
