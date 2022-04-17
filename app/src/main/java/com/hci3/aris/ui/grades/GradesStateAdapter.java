@@ -7,12 +7,12 @@ import androidx.fragment.app.Fragment;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
 
-public class GradeDetailsAdapter extends FragmentStateAdapter {
+public class GradesStateAdapter extends FragmentStateAdapter {
 
     Context ctx;
     int totalTabs;
 
-    public GradeDetailsAdapter(Context context, GradeDetailsFragment fragment, int totalTabs) {
+    public GradesStateAdapter(Context context, GradesDetailsFragment fragment, int totalTabs) {
         super(fragment);
         this.ctx = context;
         this.totalTabs = totalTabs;
@@ -28,6 +28,6 @@ public class GradeDetailsAdapter extends FragmentStateAdapter {
     public Fragment createFragment(int position) {
 
         // since this is just a sample, show same details to all tabs
-        return new GradeDetailsView();
+        return new GradesDetailsView();
     }
 }

@@ -19,9 +19,9 @@ import com.hci3.aris.R;
 import java.util.ArrayList;
 import java.util.List;
 
-public class GradeDetailsFragment extends Fragment {
+public class GradesDetailsFragment extends Fragment {
 
-    public GradeDetailsFragment() {
+    public GradesDetailsFragment() {
         /*
          * Mandatory empty constructor for the fragment manager to instantiate the
          * fragment (e.g. upon screen orientation changes).
@@ -52,7 +52,7 @@ public class GradeDetailsFragment extends Fragment {
         TabLayout tabLayout = view.findViewById(R.id.grade_details_tablayout);
         ViewPager2 viewPager = view.findViewById(R.id.grade_details_pager);
 
-        GradeDetailsAdapter gradeDetailsAdapter = new GradeDetailsAdapter(getContext(), this, tabLayout.getTabCount());
+        GradesStateAdapter gradeDetailsAdapter = new GradesStateAdapter(getContext(), this, tabLayout.getTabCount());
         viewPager.setAdapter(gradeDetailsAdapter);
 
         new TabLayoutMediator(tabLayout, viewPager, (TabLayout.Tab tab, int position) ->

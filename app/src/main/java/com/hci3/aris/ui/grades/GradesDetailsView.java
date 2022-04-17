@@ -11,9 +11,9 @@ import androidx.fragment.app.Fragment;
 
 import com.hci3.aris.R;
 
-public class GradeDetailsView extends Fragment {
+public class GradesDetailsView extends Fragment {
 
-    public GradeDetailsView() {
+    public GradesDetailsView() {
         /*
          * Mandatory empty constructor for the fragment manager to instantiate the
          * fragment (e.g. upon screen orientation changes).
@@ -28,7 +28,7 @@ public class GradeDetailsView extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.layout_grade_details, container, false);
+        return inflater.inflate(R.layout.component_card_grade_details, container, false);
     }
 
     @Override

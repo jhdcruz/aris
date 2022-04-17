@@ -27,7 +27,7 @@ public class SemesterAdapter extends RecyclerView.Adapter<SemesterAdapter.ViewHo
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.layout_semester, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.component_card_semester, parent, false);
         return new SemesterAdapter.ViewHolder(view);
     }
 

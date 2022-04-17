@@ -16,11 +16,11 @@ import com.hci3.aris.R;
 
 public class ScheduleFragment extends Fragment {
 
-    /**
+    public ScheduleFragment() {
+     /*
      * Mandatory empty constructor for the fragment manager to instantiate the
      * fragment (e.g. upon screen orientation changes).
      */
-    public ScheduleFragment() {
     }
 
     @Override

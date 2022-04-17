@@ -14,7 +14,6 @@ import android.view.ViewGroup;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
 import com.hci3.aris.R;
-import com.hci3.aris.adapter.BalanceAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -46,12 +45,12 @@ public class BalanceFragment extends Fragment {
 
 
         TabLayout tabLayout = view.findViewById(R.id.tabBar);
-        ViewPager2 viewPager2 = view.findViewById(R.id.viewPager);
+        ViewPager2 viewPager = view.findViewById(R.id.viewPager);
 
-        BalanceAdapter adapter = new BalanceAdapter(getContext(), this , tabLayout.getTabCount());
-        viewPager2.setAdapter(adapter);
+        BalanceStateAdapter adapter = new BalanceStateAdapter(getContext(), this, tabLayout.getTabCount());
+        viewPager.setAdapter(adapter);
 
-        new TabLayoutMediator(tabLayout, viewPager2, (TabLayout.Tab tab, int position) ->
+        new TabLayoutMediator(tabLayout, viewPager, (TabLayout.Tab tab, int position) ->
                 tab.setText(titles.get(position))).attach();
 
     }

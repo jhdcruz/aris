@@ -6,8 +6,7 @@
     android:id="@+id/grades_list_container"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginStart="8dp"
-    android:layout_marginEnd="8dp"
+    android:layout_marginHorizontal="8dp"
     tools:context=".ui.semester.SemesterGradesFragment">
 
     <androidx.recyclerview.widget.RecyclerView
@@ -16,6 +15,6 @@
         android:layout_height="wrap_content"
         android:fillViewport="true"
         app:layoutManager="LinearLayoutManager"
-        tools:listitem="@layout/layout_course" />
+        tools:listitem="@layout/component_card_grade" />
 
 </androidx.core.widget.NestedScrollView>

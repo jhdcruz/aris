@@ -68,7 +68,7 @@
 
         <fragment
             android:id="@+id/subnav_grade_details_list"
-            android:name="com.hci3.aris.ui.grades.GradeDetailsFragment"
+            android:name="com.hci3.aris.ui.grades.GradesDetailsFragment"
             android:label="Grade Details"
             tools:layout="@layout/fragment_grade_details_list" />
 
