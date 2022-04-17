@@ -78,7 +78,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Courses"
-                        android:textSize="12sp" />
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
 
                     <com.google.android.material.textview.MaterialTextView
                         android:id="@+id/course_count"
@@ -103,7 +104,8 @@
                         android:layout_height="wrap_content"
                         android:text="Course Units"
                         android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                        android:textSize="12sp" />
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -127,8 +129,7 @@
                             android:layout_marginEnd="2dp"
                             android:layout_weight="1"
                             android:text="/"
-                            android:textSize="20sp"
-                            android:textStyle="bold" />
+                            android:textSize="20sp" />
 
                         <com.google.android.material.textview.MaterialTextView
                             android:id="@+id/units_enrolled"
@@ -155,7 +156,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Average"
-                        android:textSize="12sp" />
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
 
                     <com.google.android.material.textview.MaterialTextView
                         android:id="@+id/sem_gpa"
