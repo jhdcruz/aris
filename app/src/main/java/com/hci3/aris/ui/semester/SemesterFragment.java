@@ -5,6 +5,7 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -46,15 +47,24 @@ public class SemesterFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         List<SemesterModel> semesterModelArray = new ArrayList<>();
+        RecyclerView listRecyclerView = view.findViewById(R.id.semester_list);
+        RecyclerView gridRecyclerView = view.findViewById(R.id.semester_grid);
 
         semesterModelArray.add(new SemesterModel("1st Sem", "2021-2022", 1.54, 20, 20, 8));
         semesterModelArray.add(new SemesterModel("2nd Sem", "2021-2022", 1.40, 18, 18, 7));
+        semesterModelArray.add(new SemesterModel("1st Sem", "2020-2021", 1.34, 20, 20, 9));
+        semesterModelArray.add(new SemesterModel("2nd Sem", "2020-2021", 1.20, 20, 18, 8));
 
         SemesterAdapter semesterAdapter = new SemesterAdapter(getContext(), semesterModelArray);
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
 
-        RecyclerView recyclerView = view.findViewById(R.id.semester_list);
-        recyclerView.setLayoutManager(linearLayoutManager);
-        recyclerView.setAdapter(semesterAdapter);
+        if (gridRecyclerView != null) {
+            GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(), 2, GridLayoutManager.VERTICAL, false);
+            gridRecyclerView.setLayoutManager(gridLayoutManager);
+            gridRecyclerView.setAdapter(semesterAdapter);
+        } else {
+            LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
+            listRecyclerView.setLayoutManager(linearLayoutManager);
+            listRecyclerView.setAdapter(semesterAdapter);
+        }
     }
 }
