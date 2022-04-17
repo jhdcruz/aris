@@ -33,13 +33,13 @@
             <action
                 android:id="@+id/action_navigation_grades_to_subnav_semester"
                 app:destination="@id/subnav_semester"
-                app:enterAnim="@anim/nav_default_enter_anim"
-                app:exitAnim="@anim/nav_default_exit_anim" />
+                app:enterAnim="@android:anim/slide_out_right"
+                app:exitAnim="@android:anim/slide_in_left" />
             <action
                 android:id="@+id/action_navigation_grades_to_subnav_grade_details_list"
                 app:destination="@id/subnav_grade_details_list"
-                app:enterAnim="@anim/nav_default_enter_anim"
-                app:exitAnim="@anim/nav_default_exit_anim" />
+                app:enterAnim="@android:anim/slide_out_right"
+                app:exitAnim="@android:anim/slide_in_left" />
         </fragment>
 
         <fragment
@@ -50,8 +50,8 @@
             <action
                 android:id="@+id/action_subnav_semester_to_subnav_grade_list"
                 app:destination="@id/subnav_grade_list"
-                app:enterAnim="@anim/nav_default_enter_anim"
-                app:exitAnim="@anim/nav_default_exit_anim" />
+                app:enterAnim="@android:anim/slide_out_right"
+                app:exitAnim="@android:anim/slide_in_left" />
         </fragment>
 
         <fragment
@@ -62,8 +62,8 @@
             <action
                 android:id="@+id/action_navigation_grades_to_subnav_grade_details_list"
                 app:destination="@id/subnav_grade_details_list"
-                app:enterAnim="@anim/nav_default_enter_anim"
-                app:exitAnim="@anim/nav_default_exit_anim" />
+                app:enterAnim="@android:anim/slide_out_right"
+                app:exitAnim="@android:anim/slide_in_left" />
         </fragment>
 
         <fragment
