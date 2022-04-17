@@ -1,29 +1,24 @@
 package com.hci3.aris.data.model;
 
-import java.text.NumberFormat;
 import java.util.Locale;
 
 public class BalanceModel {
-    NumberFormat number = NumberFormat.getNumberInstance(Locale.getDefault());
 
     private final String term;
     private final String receipt;
     private final String date;
 
-    // intentionally use String to preserve 2 decimals
-    // and since we'll only use a sample data, so no need for formatters
-    private final String amount;
-    private final String paid;
-    private final String remaining;
+    private final double amount;
+    private final double paid;
 
-    public BalanceModel(String term, String receipt, String date, String amount,
-                        String paid) {
+    public BalanceModel(String term, String receipt, String date, double amount,
+                        double paid) {
         this.term = term;
         this.receipt = receipt;
         this.date = date;
         this.amount = amount;
         this.paid = paid;
-        this.remaining = getRemaining();
+        String remaining = getRemaining();
     }
 
     public String getTerm() {
@@ -39,15 +34,15 @@ public class BalanceModel {
     }
 
     public String getAmount() {
-        return amount;
+        return String.format(Locale.US, "%,.2f", amount);
     }
 
     public String getPaid() {
-        return paid;
+        return String.format(Locale.US, "%,.2f", paid);
     }
 
     public String getRemaining() {
-        return String.format(Locale.US, "%.2f",
-                Double.parseDouble(amount) - Double.parseDouble(paid));
+        return String.format(Locale.US, "%,.2f",
+                amount - paid);
     }
 }
