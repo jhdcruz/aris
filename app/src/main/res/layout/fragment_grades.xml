@@ -56,6 +56,7 @@
                 android:textSize="12sp" />
         </LinearLayout>
 
+        <!--suppress AndroidUnresolvableTag -->
         <Space
             android:layout_width="0dp"
             android:layout_height="wrap_content"
