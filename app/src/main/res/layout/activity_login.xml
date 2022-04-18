@@ -19,11 +19,12 @@
         android:layout_marginTop="24dp"
         android:layout_marginEnd="32dp"
         android:contentDescription="@string/app_name"
+        android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/ic_launcher" />
+        app:srcCompat="@mipmap/logo_aris" />
 
     <EditText
         android:id="@+id/password"
