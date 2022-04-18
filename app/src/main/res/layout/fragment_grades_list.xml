@@ -2,7 +2,6 @@
 
 <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/grades_list_container"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginHorizontal="8dp"
@@ -13,6 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fillViewport="true"
-        tools:listitem="@layout/component_card_grade" />
+        tools:listitem="@layout/component_card_grade"
+        tools:ignore="InconsistentLayout" />
 
 </androidx.core.widget.NestedScrollView>

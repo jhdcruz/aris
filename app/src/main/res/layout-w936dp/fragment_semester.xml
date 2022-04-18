@@ -14,6 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
-        tools:listitem="@layout/component_card_semester" />
+        tools:listitem="@layout/component_card_semester"
+        tools:ignore="InconsistentLayout" />
 
 </androidx.core.widget.NestedScrollView>

@@ -45,7 +45,6 @@
         </LinearLayout>
 
         <View
-            android:id="@+id/divider6"
             android:layout_width="match_parent"
             android:layout_height="2dp"
             android:layout_marginVertical="12dp"

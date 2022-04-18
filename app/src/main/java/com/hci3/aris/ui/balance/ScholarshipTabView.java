@@ -15,7 +15,6 @@ import android.view.ViewGroup;
 
 import com.hci3.aris.R;
 import com.hci3.aris.data.model.ScholarshipModel;
-import com.hci3.aris.data.model.SemesterModel;
 
 import java.util.ArrayList;
 import java.util.List;

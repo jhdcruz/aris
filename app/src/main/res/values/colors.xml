@@ -4,7 +4,6 @@
     <color name="primary_light">#F1C17C</color>
     <color name="secondary">#CA8F3C</color>
     <color name="black_matte">#1E1E1E</color>
-    <color name="dark_black">#0F0F0F</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 </resources>

@@ -18,14 +18,10 @@
     <string name="title_grades">Grades</string>
     <string name="title_schedule">Schedule</string>
     <string name="title_balance">Balance</string>
-    <string name="title_notifications">Notifications</string>
 
-    <string name="action_notifications">Notifications</string>
     <string name="action_logout">Logout</string>
     <string name="action_forgot_pass">Forgot password</string>
 
-    <string name="tip_qc">TIP Quezon City</string>
-    <string name="tip_mnl">TIP Manila</string>
-<!-- TODO: Remove or change this placeholder text -->
+    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

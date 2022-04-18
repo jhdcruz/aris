@@ -14,7 +14,6 @@ import com.hci3.aris.R;
 import com.hci3.aris.data.model.BalanceModel;
 
 import java.util.List;
-import java.util.Locale;
 
 
 public class BalanceRecyclerAdapter extends RecyclerView.Adapter<BalanceRecyclerAdapter.ViewHolder> {

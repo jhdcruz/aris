@@ -14,7 +14,6 @@
         <include layout="@layout/component_grade_details_summary" />
 
         <View
-            android:id="@+id/divider7"
             android:layout_width="match_parent"
             android:layout_height="3dp"
             android:layout_marginTop="12dp"
@@ -29,7 +28,8 @@
                 android:id="@+id/grade_details_list"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                tools:listitem="@layout/component_card_grade_details" />
+                tools:listitem="@layout/component_card_grade_details"
+                tools:ignore="InconsistentLayout" />
 
         </androidx.core.widget.NestedScrollView>
 
@@ -49,6 +49,6 @@
         android:textStyle="bold"
         app:icon="@drawable/ic_baseline_email_24"
         app:iconTint="@color/black_matte"
-        tools:ignore="HardcodedText" />android:fillViewport="true">
+        tools:ignore="HardcodedText" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

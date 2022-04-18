@@ -22,7 +22,6 @@
             android:orientation="horizontal">
 
             <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/textView23"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -32,7 +31,6 @@
                 android:textStyle="bold" />
 
             <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/textView24"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -44,7 +42,6 @@
         </LinearLayout>
 
         <View
-            android:id="@+id/divider8"
             android:layout_width="match_parent"
             android:layout_height="3dp"
             android:layout_marginStart="12dp"
@@ -67,7 +64,8 @@
                 android:paddingTop="2dp"
                 android:paddingBottom="78dp"
                 app:layoutManager="LinearLayoutManager"
-                tools:listitem="@layout/component_card_balance" />
+                tools:listitem="@layout/component_card_balance"
+                tools:ignore="InconsistentLayout" />
 
         </androidx.core.widget.NestedScrollView>
 

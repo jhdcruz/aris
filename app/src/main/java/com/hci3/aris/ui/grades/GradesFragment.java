@@ -22,11 +22,11 @@ import com.hci3.aris.data.CourseDataSource;
 
 public class GradesFragment extends Fragment {
 
-    /*
-     * Mandatory empty constructor for the fragment manager to instantiate the
-     * fragment (e.g. upon screen orientation changes).
-     */
     public GradesFragment() {
+        /*
+         * Mandatory empty constructor for the fragment manager to instantiate the
+         * fragment (e.g. upon screen orientation changes).
+         */
     }
 
     @Override

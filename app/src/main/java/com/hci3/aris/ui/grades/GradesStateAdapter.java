@@ -9,8 +9,8 @@ import androidx.viewpager2.adapter.FragmentStateAdapter;
 
 public class GradesStateAdapter extends FragmentStateAdapter {
 
-    Context ctx;
-    int totalTabs;
+    final Context ctx;
+    final int totalTabs;
 
     public GradesStateAdapter(Context context, GradesDetailsFragment fragment, int totalTabs) {
         super(fragment);
