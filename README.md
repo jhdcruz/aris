@@ -12,6 +12,7 @@
 
 ## Some Screenshots
 
+<p>
 <img src="./docs/1.jpg" alt="ARIS Logo" width="200" height="400" />
 <img src="./docs/1l.jpg" alt="ARIS Logo" width="200" height="400" />
 <img src="./docs/2.jpg" alt="ARIS Logo" width="200" height="400" />
@@ -22,8 +23,9 @@
 <img src="./docs/4l.jpg" alt="ARIS Logo" width="200" height="400" />
 <img src="./docs/5.jpg" alt="ARIS Logo" width="200" height="400" />
 <img src="./docs/5l.jpg" alt="ARIS Logo" width="200" height="400" />
+</p>
 
-> Material Design 3 | https://m3.material.io
+> **NOTE:** Not an actual data. Sample data are used.
 
 ## Features
 
@@ -53,6 +55,10 @@ The flow of your application should portray:
 
 - No real-time processing required (database). If ever you know how to use cloud databases/API, it
   will not be part of the grading and requirements.
+  
+## Credits
+
+- [Material Design 3](https://m3.material.io)
 
 ## License
 
