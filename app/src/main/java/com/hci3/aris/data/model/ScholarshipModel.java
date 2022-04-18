@@ -1,5 +1,7 @@
 package com.hci3.aris.data.model;
 
+import java.util.Locale;
+
 public class ScholarshipModel {
 
     private final String name;
@@ -20,7 +22,7 @@ public class ScholarshipModel {
         return date;
     }
 
-    public double getAmount() {
-        return amount;
+    public String getAmount() {
+        return String.format(Locale.US, "%,.2f", amount);
     }
 }

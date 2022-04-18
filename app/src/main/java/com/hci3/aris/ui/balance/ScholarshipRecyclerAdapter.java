@@ -39,7 +39,7 @@ public class ScholarshipRecyclerAdapter extends RecyclerView.Adapter<Scholarship
         // to set data to textview
         ScholarshipModel model = scholarshipModelArrayList.get(position);
         holder.name.setText(model.getName());
-        holder.date.setText("Date: " + model.getDate());
+        holder.date.setText(model.getDate());
         holder.amount.setText("₱" + model.getAmount());
     }
 
