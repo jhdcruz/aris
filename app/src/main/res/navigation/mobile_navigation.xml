@@ -33,13 +33,17 @@
             <action
                 android:id="@+id/action_navigation_grades_to_subnav_semester"
                 app:destination="@id/subnav_semester"
-                app:enterAnim="@android:anim/slide_out_right"
-                app:exitAnim="@android:anim/slide_in_left" />
+                app:enterAnim="@android:anim/slide_in_left"
+                app:exitAnim="@android:anim/slide_out_right"
+                app:popEnterAnim="@android:anim/fade_in"
+                app:popExitAnim="@android:anim/fade_out" />
             <action
                 android:id="@+id/action_navigation_grades_to_subnav_grade_details_list"
                 app:destination="@id/subnav_grade_details_list"
-                app:enterAnim="@android:anim/slide_out_right"
-                app:exitAnim="@android:anim/slide_in_left" />
+                app:enterAnim="@android:anim/slide_in_left"
+                app:exitAnim="@android:anim/slide_out_right"
+                app:popEnterAnim="@android:anim/fade_in"
+                app:popExitAnim="@android:anim/fade_out" />
         </fragment>
 
         <fragment
@@ -50,8 +54,10 @@
             <action
                 android:id="@+id/action_subnav_semester_to_subnav_grade_list"
                 app:destination="@id/subnav_grade_list"
-                app:enterAnim="@android:anim/slide_out_right"
-                app:exitAnim="@android:anim/slide_in_left" />
+                app:enterAnim="@android:anim/slide_in_left"
+                app:exitAnim="@android:anim/slide_out_right"
+                app:popEnterAnim="@android:anim/fade_in"
+                app:popExitAnim="@android:anim/fade_out" />
         </fragment>
 
         <fragment
@@ -62,8 +68,10 @@
             <action
                 android:id="@+id/action_navigation_grades_to_subnav_grade_details_list"
                 app:destination="@id/subnav_grade_details_list"
-                app:enterAnim="@android:anim/slide_out_right"
-                app:exitAnim="@android:anim/slide_in_left" />
+                app:enterAnim="@android:anim/slide_in_left"
+                app:exitAnim="@android:anim/slide_out_right"
+                app:popEnterAnim="@android:anim/fade_in"
+                app:popExitAnim="@android:anim/fade_out" />
         </fragment>
 
         <fragment
