@@ -1,20 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/grades_list_container"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginHorizontal="8dp"
     tools:context=".ui.semester.SemesterGradesFragment">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/grades_list_grid"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fillViewport="true"
-        app:layoutManager="LinearLayoutManager"
         tools:listitem="@layout/component_card_grade" />
 
 </androidx.core.widget.NestedScrollView>
