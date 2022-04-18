@@ -53,10 +53,10 @@ public class SemesterFragment extends Fragment {
         semesterModelArray.add(new SemesterModel("1st Sem", "2020-2021", 1.34, 20, 20, 9));
         semesterModelArray.add(new SemesterModel("2nd Sem", "2020-2021", 1.20, 20, 18, 8));
 
+        SemesterAdapter semesterAdapter = new SemesterAdapter(getContext(), semesterModelArray);
+
         RecyclerView listRecyclerView = view.findViewById(R.id.semester_list);
         RecyclerView gridRecyclerView = view.findViewById(R.id.semester_grid);
-
-        SemesterAdapter semesterAdapter = new SemesterAdapter(getContext(), semesterModelArray);
 
         if (gridRecyclerView != null) {
             GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(), 2, GridLayoutManager.VERTICAL, false);
