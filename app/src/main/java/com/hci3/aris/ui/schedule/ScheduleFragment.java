@@ -1,7 +1,5 @@
 package com.hci3.aris.ui.schedule;
 
-import androidx.lifecycle.ViewModelProvider;
-
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;

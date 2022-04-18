@@ -22,20 +22,18 @@
             android:orientation="horizontal">
 
             <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/textView23"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_marginHorizontal="4dp"
                 android:text="Total Balance"
                 android:textAlignment="center"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
             <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/textView24"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_marginHorizontal="4dp"
                 android:text="₱34,000.00"
                 android:textAlignment="center"
                 android:textColor="@color/primary"
@@ -66,7 +64,8 @@
                 android:paddingTop="2dp"
                 android:paddingBottom="78dp"
                 app:layoutManager="LinearLayoutManager"
-                tools:listitem="@layout/component_card_balance" />
+                tools:listitem="@layout/component_card_balance"
+                tools:ignore="InconsistentLayout" />
 
         </androidx.core.widget.NestedScrollView>
 

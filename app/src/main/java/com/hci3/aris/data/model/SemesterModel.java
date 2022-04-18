@@ -4,12 +4,12 @@ import java.util.Locale;
 
 public class SemesterModel {
 
-    private String semester;
-    private String schoolYear;
-    private double semGpa;
-    private int unitsEarned;
-    private int unitsEnrolled;
-    private int courseCount;
+    private final String semester;
+    private final String schoolYear;
+    private final double semGpa;
+    private final int unitsEarned;
+    private final int unitsEnrolled;
+    private final int courseCount;
 
     public SemesterModel(String semester, String schoolYear, double semGpa, int semUnits,
                          int semTotal, int courses) {

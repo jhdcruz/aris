@@ -2,7 +2,6 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingLeft="@dimen/activity_horizontal_margin"
@@ -14,6 +13,7 @@
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:baselineAligned="false"
         android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -106,7 +106,6 @@
                 android:textSize="20sp" />
 
             <TextView
-                android:id="@+id/textView13"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="6dp"
@@ -138,12 +137,12 @@
             android:orientation="vertical">
 
             <ImageView
-                android:id="@+id/imageView3"
-                android:layout_width="250dp"
-                android:layout_height="250dp"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
                 android:layout_marginBottom="12dp"
                 android:contentDescription="@string/app_name"
-                app:srcCompat="@mipmap/ic_launcher" />
+                android:scaleType="centerCrop"
+                app:srcCompat="@mipmap/logo_aris" />
 
         </LinearLayout>
 
@@ -162,7 +161,6 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"

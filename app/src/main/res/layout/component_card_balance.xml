@@ -2,7 +2,6 @@
 
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/balance_card"
     style="@style/Widget.Material3.CardView.Elevated"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -58,7 +57,6 @@
         </LinearLayout>
 
         <View
-            android:id="@+id/divider3"
             android:layout_width="match_parent"
             android:layout_height="2dp"
             android:layout_marginVertical="6dp"
@@ -80,14 +78,12 @@
                 android:orientation="vertical">
 
                 <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/textView7"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Amount"
                     android:textSize="14sp" />
 
                 <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/textView12"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Paid"
@@ -121,7 +117,6 @@
         </LinearLayout>
 
         <View
-            android:id="@+id/divider4"
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_marginVertical="6dp"
@@ -134,7 +129,6 @@
             android:orientation="horizontal">
 
             <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/textView16"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"

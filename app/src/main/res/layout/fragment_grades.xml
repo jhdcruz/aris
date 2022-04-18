@@ -27,7 +27,6 @@
                 android:orientation="horizontal">
 
                 <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/textView3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Currently Enrolled Courses"
@@ -47,7 +46,6 @@
             </LinearLayout>
 
             <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/textView11"
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
                 android:layout_weight="1"
@@ -56,6 +54,7 @@
                 android:textSize="12sp" />
         </LinearLayout>
 
+        <!--suppress AndroidUnresolvableTag, AndroidElementNotAllowed -->
         <Space
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -70,7 +69,6 @@
     </LinearLayout>
 
     <View
-        android:id="@+id/divider4"
         android:layout_width="match_parent"
         android:layout_height="3dp"
         android:layout_marginStart="14dp"

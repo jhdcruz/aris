@@ -9,8 +9,8 @@ import androidx.viewpager2.adapter.FragmentStateAdapter;
 
 public class BalanceStateAdapter extends FragmentStateAdapter {
 
-    Context ctx;
-    int totalTabs;
+    final Context ctx;
+    final int totalTabs;
 
     public BalanceStateAdapter(Context context, BalanceFragment fragment, int totalTabs) {
         super(fragment);
@@ -26,7 +26,7 @@ public class BalanceStateAdapter extends FragmentStateAdapter {
             case 1:
                 return new Enrollment_fragment2();
             default:
-                return new BalanceScholarshipFragment();
+                return new ScholarshipTabView();
         }
     }
 
