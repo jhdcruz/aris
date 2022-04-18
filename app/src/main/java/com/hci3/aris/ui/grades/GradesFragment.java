@@ -7,6 +7,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -45,13 +46,20 @@ public class GradesFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         CourseDataSource dataSource = new CourseDataSource();
-
         GradesRecyclerAdapter courseAdapter = new GradesRecyclerAdapter(getContext(), dataSource.getCourses());
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
 
-        RecyclerView recyclerView = view.findViewById(R.id.grades_list);
-        recyclerView.setLayoutManager(linearLayoutManager);
-        recyclerView.setAdapter(courseAdapter);
+        RecyclerView recyclerViewGrid = view.findViewById(R.id.grades_list_grid);
+        RecyclerView recyclerViewList = view.findViewById(R.id.grades_list);
+
+        if (recyclerViewGrid != null) {
+            GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(), 3, GridLayoutManager.VERTICAL, false);
+            recyclerViewGrid.setLayoutManager(gridLayoutManager);
+            recyclerViewGrid.setAdapter(courseAdapter);
+        } else {
+            LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
+            recyclerViewList.setLayoutManager(linearLayoutManager);
+            recyclerViewList.setAdapter(courseAdapter);
+        }
 
         MaterialTextView enrolledCourses = view.findViewById(R.id.enrolled_courses);
         enrolledCourses.setText("(" + courseAdapter.getItemCount() + ")");

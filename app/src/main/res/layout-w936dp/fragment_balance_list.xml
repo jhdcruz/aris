@@ -44,7 +44,6 @@
         </LinearLayout>
 
         <View
-            android:id="@+id/divider8"
             android:layout_width="match_parent"
             android:layout_height="3dp"
             android:layout_marginStart="12dp"
@@ -59,7 +58,7 @@
             android:layout_marginTop="8dp">
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/balance_list"
+                android:id="@+id/balance_grid"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:clipToPadding="false"
