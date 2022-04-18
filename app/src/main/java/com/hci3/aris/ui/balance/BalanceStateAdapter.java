@@ -26,7 +26,7 @@ public class BalanceStateAdapter extends FragmentStateAdapter {
             case 1:
                 return new Enrollment_fragment2();
             default:
-                return new BalanceScholarshipFragment();
+                return new ScholarshipTabView();
         }
     }
 

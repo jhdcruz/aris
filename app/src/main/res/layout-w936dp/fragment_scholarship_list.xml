@@ -16,7 +16,7 @@
         <com.google.android.material.textview.MaterialTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_marginHorizontal="4dp"
             android:text="Total Deducted Amount:"
             android:textAlignment="center"
             android:textSize="16sp"
@@ -25,7 +25,7 @@
         <com.google.android.material.textview.MaterialTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_marginHorizontal="4dp"
             android:text="₱32,000.00"
             android:textAlignment="center"
             android:textColor="@color/primary"
@@ -44,7 +44,7 @@
         android:background="?android:attr/listDivider" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/scholarship_list"
+        android:id="@+id/scholarship_grid"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
