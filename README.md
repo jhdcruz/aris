@@ -1,8 +1,21 @@
+<div align="center">
+  
 # ARIS Grading System Interface
 
 [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=jhdcruz_aris&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=jhdcruz_aris) [![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=jhdcruz_aris&metric=reliability_rating)](https://sonarcloud.io/summary/new_code?id=jhdcruz_aris) [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=jhdcruz_aris&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=jhdcruz_aris) [![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=jhdcruz_aris&metric=ncloc)](https://sonarcloud.io/summary/new_code?id=jhdcruz_aris)
 
-Grading system (Student View) user interface design.
+
+<img src="./app/src/main/res/mipmap-xxxhdpi/logo_aris.png" alt="ARIS Logo" width="360" height="240" />
+
+
+**Grading system user interface design.** _(student view)_
+  
+  </div>
+
+## Screenshots
+
+TODO
+
 
 ## Features
 
