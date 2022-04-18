@@ -18,7 +18,6 @@ public class BalanceModel {
         this.date = date;
         this.amount = amount;
         this.paid = paid;
-        String remaining = getRemaining();
     }
 
     public String getTerm() {
