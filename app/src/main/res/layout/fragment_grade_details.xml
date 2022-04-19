@@ -28,8 +28,8 @@
                 android:id="@+id/grade_details_list"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                tools:listitem="@layout/component_card_grade_details"
-                tools:ignore="InconsistentLayout" />
+                tools:ignore="InconsistentLayout"
+                tools:listitem="@layout/component_card_grade_details" />
 
         </androidx.core.widget.NestedScrollView>
 
@@ -37,6 +37,7 @@
 
 
     <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/inquire_button"
         style="@style/Widget.Material3.FloatingActionButton.Primary"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

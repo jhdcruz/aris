@@ -30,7 +30,7 @@ public class SemesterModel {
     }
 
     public double getSemGpa() {
-        return Double.parseDouble(String.format(Locale.ENGLISH, "%.2f", semGpa));
+        return Double.parseDouble(String.format(Locale.US, "%.2f", semGpa));
     }
 
     public int getUnitsEarned() {

@@ -20,7 +20,6 @@ public class CourseModel {
         this.courseCode = courseCode;
         this.courseName = courseName;
         this.courseUnits = courseUnits;
-        String courseGpa = getCourseGpa();
         this.gradePrelim = gradePrelim;
         this.gradeMidterm = gradeMidterm;
         this.gradeFinal = gradeFinal;

@@ -40,14 +40,14 @@
                 android:layout_weight="2"
                 android:orientation="vertical">
 
-                <TextView
+                <com.google.android.material.textview.MaterialTextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Date Posted:"
                     android:textAlignment="viewEnd"
                     android:textSize="12sp" />
 
-                <TextView
+                <com.google.android.material.textview.MaterialTextView
                     android:id="@+id/scholarship_date"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
