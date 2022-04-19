@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -54,5 +55,12 @@ public class GradesDetailsView extends Fragment {
             linearRecyclerView.setLayoutManager(linearLayoutManager);
             linearRecyclerView.setAdapter(gradeDetailsAdapter);
         }
+
+        // Inquiry dialog
+        Button gradesInquire = view.findViewById(R.id.inquire_button);
+        gradesInquire.setOnClickListener(l -> {
+            GradesInquireBottomSheet inquire = new GradesInquireBottomSheet();
+            inquire.show(this.getParentFragmentManager(), "grades_inquire");
+        });
     }
 }
