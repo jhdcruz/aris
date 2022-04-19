@@ -1,19 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.balance.Enrollment_fragment2"
+    tools:context=".ui.balance.EnrollmentTabView"
     android:orientation="vertical">
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="~~~~~~~~~~1st Semester~~~~~~~~~~"
-        android:textAlignment="center"
-        android:textSize="16sp"
-        android:textStyle="bold" />
 
 
     <com.google.android.material.card.MaterialCardView
@@ -65,7 +57,7 @@
                             android:textSize="16sp" />
 
                         <TextView
-                            android:id="@+id/course_units"
+                            android:id="@+id/dates"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -75,7 +67,7 @@
                 </LinearLayout>
 
                 <TextView
-                    android:id="@+id/reciept"
+                    android:id="@+id/reciepts"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="OR# : 0000000000"
@@ -119,7 +111,7 @@
                     <TextView
                         android:id="@+id/due_amount"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="22dp"
                         android:layout_weight="1"
                         android:text=" Php 0.00" />
                 </LinearLayout>
@@ -139,7 +131,7 @@
                         android:textSize="16sp" />
 
                     <TextView
-                        android:id="@+id/paid_units"
+                        android:id="@+id/paid_amount"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -161,7 +153,7 @@
                         android:textSize="16sp" />
 
                     <TextView
-                        android:id="@+id/balance_units"
+                        android:id="@+id/balance_amount"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -175,16 +167,5 @@
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
 
-    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
-        android:id="@+id/extended_fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="16dp"
-        android:text="Payment Type"
-        android:textStyle="bold"
-        app:showMotionSpec="@anim/nav_default_pop_enter_anim" />
-
-
-</LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
 
