@@ -11,25 +11,24 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.hci3.aris.R;
-import com.hci3.aris.data.model.BalanceModel;
 import com.hci3.aris.data.model.EnrollmentModel;
 
 import java.util.List;
 
 public class EnrollmentRecyclerAdapter extends RecyclerView.Adapter<EnrollmentRecyclerAdapter.ViewHolder> {
 
-    private final List<EnrollmentModel> enrollModelArrayList;
+    private final List<EnrollmentModel> enrollmentModelArrayList;
 
     // Constructor
-    public EnrollmentRecyclerAdapter(Context context, List<EnrollmentModel> enrollModelArrayList) {
-        this.enrollModelArrayList = enrollModelArrayList;
+    public EnrollmentRecyclerAdapter(Context context, List<EnrollmentModel> enrollmentModelArrayList) {
+        this.enrollmentModelArrayList = enrollmentModelArrayList;
     }
 
     @NonNull
     @Override
     public EnrollmentRecyclerAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         // to inflate the layout for each item of recycler view.
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.component_card_enrollment, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.component_card_balance, parent, false);
         return new EnrollmentRecyclerAdapter.ViewHolder(view);
     }
 
@@ -37,14 +36,15 @@ public class EnrollmentRecyclerAdapter extends RecyclerView.Adapter<EnrollmentRe
     @Override
     public void onBindViewHolder(@NonNull EnrollmentRecyclerAdapter.ViewHolder holder, int position) {
         // to set data to textview
-        EnrollmentModel model = enrollModelArrayList.get(position);
+        EnrollmentModel model = enrollmentModelArrayList.get(position);
         holder.sem.setText(model.getSem());
-        holder.receipt.setText("OR #: " + model.getOR());
+        holder.receipt.setText("OR #: " + model.getReceipt());
         holder.date.setText("Date: " + model.getDates());
 
         holder.amount.setText("₱" + model.getAmounts());
         holder.paid.setText("₱" + model.getPayment());
         holder.remaining.setText("₱" + model.getRemaining());
+        holder.paymentType.setText(model.isFull());
     }
 
     /**
@@ -52,7 +52,7 @@ public class EnrollmentRecyclerAdapter extends RecyclerView.Adapter<EnrollmentRe
      */
     @Override
     public int getItemCount() {
-        return enrollModelArrayList.size();
+        return enrollmentModelArrayList.size();
     }
 
     // View holder class for initializing of
@@ -65,16 +65,20 @@ public class EnrollmentRecyclerAdapter extends RecyclerView.Adapter<EnrollmentRe
         private final TextView amount;
         private final TextView paid;
         private final TextView remaining;
+        private final TextView paymentType;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            sem = itemView.findViewById(R.id.installment);
-            receipt = itemView.findViewById(R.id.reciepts);
-            date = itemView.findViewById(R.id.dates);
+            sem = itemView.findViewById(R.id.balance_term);
+            receipt = itemView.findViewById(R.id.balance_receipt);
+            date = itemView.findViewById(R.id.balance_date);
 
-            amount = itemView.findViewById(R.id.due_amount);
-            paid = itemView.findViewById(R.id.paid_amount);
-            remaining = itemView.findViewById(R.id.balance_amount);
+            amount = itemView.findViewById(R.id.balance_amount);
+            paid = itemView.findViewById(R.id.balance_paid);
+            remaining = itemView.findViewById(R.id.balance_remaining);
+
+            paymentType = itemView.findViewById(R.id.balance_payment_type);
+            paymentType.setVisibility(View.VISIBLE);
         }
     }
 }

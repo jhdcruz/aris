@@ -13,11 +13,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 
 import com.hci3.aris.R;
-import com.hci3.aris.data.BalanceDataSource;
-import com.hci3.aris.data.model.EnrollmentDataSource;
+import com.hci3.aris.data.EnrollmentDataSource;
 
 public class EnrollmentTabView extends Fragment {
 
@@ -29,7 +27,7 @@ public class EnrollmentTabView extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_enrollment_list, container, false);
+        return inflater.inflate(R.layout.fragment_enrollment, container, false);
     }
 
     @SuppressLint("SetTextI18n")
@@ -38,13 +36,19 @@ public class EnrollmentTabView extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         EnrollmentDataSource sourceData = new EnrollmentDataSource();
-        EnrollmentRecyclerAdapter Adapter = new EnrollmentRecyclerAdapter(getContext(), sourceData.getEnrolled() );
+        EnrollmentRecyclerAdapter enrollmentAdapter = new EnrollmentRecyclerAdapter(getContext(), sourceData.getEnrollment());
 
         RecyclerView linearRecyclerView = view.findViewById(R.id.enrollment_list);
+        RecyclerView gridRecyclerView = view.findViewById(R.id.enrollment_grid);
 
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
-        linearRecyclerView.setLayoutManager(linearLayoutManager);
-        linearRecyclerView.setAdapter(Adapter);
-
+        if (gridRecyclerView != null) {
+            GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(), 3, GridLayoutManager.VERTICAL, false);
+            gridRecyclerView.setLayoutManager(gridLayoutManager);
+            gridRecyclerView.setAdapter(enrollmentAdapter);
+        } else {
+            LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
+            linearRecyclerView.setLayoutManager(linearLayoutManager);
+            linearRecyclerView.setAdapter(enrollmentAdapter);
+        }
     }
 }

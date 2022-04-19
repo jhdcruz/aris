@@ -41,7 +41,8 @@
                     android:layout_height="wrap_content"
                     android:singleLine="false"
                     android:text="Course Name"
-                    android:textSize="16sp" />
+                    android:textSize="14sp"
+                    android:textStyle="italic" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -54,14 +55,15 @@
                         android:layout_marginEnd="4dp"
                         android:singleLine="false"
                         android:text="Units:"
-                        android:textSize="16sp" />
+                        android:textSize="14sp" />
 
                     <com.google.android.material.textview.MaterialTextView
                         android:id="@+id/course_units"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="0" />
+                        android:text="0"
+                        android:textSize="14sp" />
                 </LinearLayout>
 
             </LinearLayout>

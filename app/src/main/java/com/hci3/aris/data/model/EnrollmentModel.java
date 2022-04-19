@@ -10,21 +10,31 @@ public class EnrollmentModel {
 
     private final double amount;
     private final double paid;
+    private final boolean isFull;
 
     public EnrollmentModel(String sem, String receipt, String date, double amount,
-                        double paid) {
-        this.sem =  sem;
+                           double paid, boolean isFull) {
+        this.sem = sem;
         this.receipt = receipt;
         this.date = date;
         this.amount = amount;
         this.paid = paid;
+        this.isFull = isFull;
+    }
+
+    public String isFull() {
+        if (isFull) {
+            return "Full Payment";
+        } else {
+            return "Installment";
+        }
     }
 
     public String getSem() {
         return sem;
     }
 
-    public String getOR() {
+    public String getReceipt() {
         return receipt;
     }
 
