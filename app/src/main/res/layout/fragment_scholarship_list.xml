@@ -16,18 +16,18 @@
         <com.google.android.material.textview.MaterialTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_marginEnd="4dp"
             android:text="Total Deducted Amount:"
-            android:textAlignment="center"
+            android:textAlignment="viewEnd"
             android:textSize="16sp"
             android:textStyle="bold" />
 
         <com.google.android.material.textview.MaterialTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_marginStart="4dp"
             android:text="₱32,000.00"
-            android:textAlignment="center"
+            android:textAlignment="viewStart"
             android:textColor="@color/primary"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -47,8 +47,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
-        tools:listitem="@layout/component_card_scholarship"
-        tools:ignore="InconsistentLayout" />
+        tools:ignore="InconsistentLayout"
+        tools:listitem="@layout/component_card_scholarship" />
 
 
 </LinearLayout>
