@@ -12,7 +12,6 @@
     <string name="login_invalid_pass">Invalid password</string>
     <string name="login_failed">"Login failed"</string>
 
-
     <!-- Navigation -->
     <string name="title_profile">Profile</string>
     <string name="title_grades">Grades</string>
@@ -21,7 +20,4 @@
 
     <string name="action_logout">Logout</string>
     <string name="action_forgot_pass">Forgot password</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
