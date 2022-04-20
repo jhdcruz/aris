@@ -46,7 +46,7 @@
                     android:textStyle="bold" />
 
                 <Button
-                    style="@style/Widget.Material3.Button.ElevatedButton"
+                    style="@style/Widget.Material3.Button.TonalButton"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
@@ -55,7 +55,7 @@
                     android:textSize="14sp" />
 
                 <Button
-                    style="@style/Widget.Material3.Button.ElevatedButton"
+                    style="@style/Widget.Material3.Button.TonalButton"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
@@ -82,7 +82,7 @@
                     android:textStyle="bold" />
 
                 <Button
-                    style="@style/Widget.Material3.Button.ElevatedButton"
+                    style="@style/Widget.Material3.Button.TonalButton"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
@@ -91,7 +91,7 @@
                     android:textSize="14sp" />
 
                 <Button
-                    style="@style/Widget.Material3.Button.ElevatedButton"
+                    style="@style/Widget.Material3.Button.TonalButton"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
