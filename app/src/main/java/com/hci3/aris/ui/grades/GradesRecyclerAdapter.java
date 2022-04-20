@@ -8,11 +8,14 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
 import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.hci3.aris.R;
 import com.hci3.aris.data.model.CourseModel;
+import com.hci3.aris.ui.ContactBottomSheet;
 
 import java.util.List;
 
@@ -20,10 +23,12 @@ import java.util.List;
 public class GradesRecyclerAdapter extends RecyclerView.Adapter<GradesRecyclerAdapter.ViewHolder> {
 
     private final List<CourseModel> courseModelArrayList;
+    Context context;
 
     // Constructor
     public GradesRecyclerAdapter(Context context, List<CourseModel> courseModelArrayList) {
         this.courseModelArrayList = courseModelArrayList;
+        this.context = context;
     }
 
     @NonNull
@@ -48,6 +53,12 @@ public class GradesRecyclerAdapter extends RecyclerView.Adapter<GradesRecyclerAd
         holder.gradeMidterm.setText(model.getGradeMidterm());
         holder.gradeFinal.setText(model.getGradeFinal());
 
+        holder.gradeContact.setOnClickListener(l -> {
+            FragmentManager manager = ((AppCompatActivity) context).getSupportFragmentManager();
+            ContactBottomSheet contact = new ContactBottomSheet();
+            contact.show(manager, "contact");
+        });
+
         holder.gradeDetails.setOnClickListener(l ->
                 Navigation.findNavController(l).navigate(R.id.action_navigation_grades_to_subnav_grade_details_list)
         );
@@ -71,6 +82,8 @@ public class GradesRecyclerAdapter extends RecyclerView.Adapter<GradesRecyclerAd
         private final TextView gradePrelim;
         private final TextView gradeMidterm;
         private final TextView gradeFinal;
+
+        private final Button gradeContact;
         private final Button gradeDetails;
 
         public ViewHolder(@NonNull View itemView) {
@@ -86,6 +99,7 @@ public class GradesRecyclerAdapter extends RecyclerView.Adapter<GradesRecyclerAd
             gradeMidterm = itemView.findViewById(R.id.midterm_grade);
             gradeFinal = itemView.findViewById(R.id.finals_grade);
 
+            gradeContact = itemView.findViewById(R.id.grade_contact);
             gradeDetails = itemView.findViewById(R.id.grade_details);
         }
     }
