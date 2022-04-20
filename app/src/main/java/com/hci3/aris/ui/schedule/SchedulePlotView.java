@@ -42,7 +42,7 @@ public class SchedulePlotView extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         CourseDataSource dataSource = new CourseDataSource();
-        ScheduleRecyclerAdapter gradeDetailsAdapter = new ScheduleRecyclerAdapter(dataSource.getCourses());
+        ScheduleRecyclerAdapter gradeDetailsAdapter = new ScheduleRecyclerAdapter(getContext(), dataSource.getCourses());
 
         RecyclerView linearRecyclerView = view.findViewById(R.id.schedule_list);
         RecyclerView gridRecyclerView = view.findViewById(R.id.schedule_grid);

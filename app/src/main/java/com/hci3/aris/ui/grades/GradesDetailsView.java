@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.hci3.aris.R;
 import com.hci3.aris.data.GradeDetailsCardDataSource;
+import com.hci3.aris.ui.ContactBottomSheet;
 
 public class GradesDetailsView extends Fragment {
 
@@ -59,7 +60,7 @@ public class GradesDetailsView extends Fragment {
         // Inquiry dialog
         Button gradesInquire = view.findViewById(R.id.inquire_button);
         gradesInquire.setOnClickListener(l -> {
-            GradesInquireBottomSheet inquire = new GradesInquireBottomSheet();
+            ContactBottomSheet inquire = new ContactBottomSheet();
             inquire.show(this.getParentFragmentManager(), "grades_inquire");
         });
     }

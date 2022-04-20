@@ -2,6 +2,8 @@ package com.hci3.aris.ui.schedule;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,7 +11,6 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.hci3.aris.R;
@@ -17,14 +18,15 @@ import com.hci3.aris.data.model.CourseModel;
 
 import java.util.List;
 
-
 public class ScheduleRecyclerAdapter extends RecyclerView.Adapter<ScheduleRecyclerAdapter.ViewHolder> {
 
     private final List<CourseModel> scheduleModelArrayList;
+    Context context;
 
     // Constructor
-    public ScheduleRecyclerAdapter(List<CourseModel> courseModelArrayList) {
+    public ScheduleRecyclerAdapter(Context context, List<CourseModel> courseModelArrayList) {
         this.scheduleModelArrayList = courseModelArrayList;
+        this.context = context;
     }
 
     @NonNull
@@ -46,6 +48,20 @@ public class ScheduleRecyclerAdapter extends RecyclerView.Adapter<ScheduleRecycl
         holder.courseSched.setText(model.getCourseSched());
         holder.courseRoom.setText(model.getCourseRoom());
         holder.courseProf.setText("Prof. " + model.getCourseProf());
+
+        holder.courseContact.setOnClickListener(l -> {
+            Uri uri = Uri.parse("https://tip.instructure.com/courses/" + model.getCourseCanvasCode() + "/assignments");
+            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+            context.startActivity(intent);
+        });
+
+        // Redirect to Canvas course conference
+        //  through the app (if installed) or through a browser
+        holder.courseConference.setOnClickListener(l -> {
+            Uri uri = Uri.parse("https://tip.instructure.com/courses/" + model.getCourseCanvasCode() + "/conferences");
+            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+            context.startActivity(intent);
+        });
     }
 
     /**
@@ -65,6 +81,9 @@ public class ScheduleRecyclerAdapter extends RecyclerView.Adapter<ScheduleRecycl
         private final TextView courseRoom;
         private final TextView courseProf;
 
+        private final Button courseContact;
+        private final Button courseConference;
+
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             // Course details
@@ -73,6 +92,9 @@ public class ScheduleRecyclerAdapter extends RecyclerView.Adapter<ScheduleRecycl
             courseProf = itemView.findViewById(R.id.course_prof);
             courseSched = itemView.findViewById(R.id.course_sched);
             courseRoom = itemView.findViewById(R.id.course_room);
+
+            courseContact = itemView.findViewById(R.id.course_contact);
+            courseConference = itemView.findViewById(R.id.course_conference);
         }
     }
 }

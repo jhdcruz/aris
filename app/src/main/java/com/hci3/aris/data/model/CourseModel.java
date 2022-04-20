@@ -10,6 +10,7 @@ public class CourseModel {
     private final String courseProf;
     private final String courseSched;
     private final String courseRoom;
+    private final String courseCanvasCode;
     private final int courseUnits;
 
     // Course Grades
@@ -19,13 +20,14 @@ public class CourseModel {
 
     // Constructor
     public CourseModel(String courseCode, String courseName, String courseProf, String courseSched,
-                       String courseRoom, int courseUnits,
+                       String courseRoom, String courseCanvasCode, int courseUnits,
                        double gradePrelim, double gradeMidterm, double gradeFinal) {
         this.courseCode = courseCode;
         this.courseName = courseName;
         this.courseProf = courseProf;
         this.courseSched = courseSched;
         this.courseRoom = courseRoom;
+        this.courseCanvasCode = courseCanvasCode;
         this.courseUnits = courseUnits;
         this.gradePrelim = gradePrelim;
         this.gradeMidterm = gradeMidterm;
@@ -33,6 +35,12 @@ public class CourseModel {
     }
 
     // Getters
+
+
+    public String getCourseCanvasCode() {
+        return courseCanvasCode;
+    }
+
     public String getCourseCode() {
         return courseCode;
     }

@@ -46,7 +46,7 @@ public class ScheduleFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         CourseDataSource dataSource = new CourseDataSource();
-        ScheduleRecyclerAdapter scheduleAdapter = new ScheduleRecyclerAdapter(dataSource.getCourses());
+        ScheduleRecyclerAdapter scheduleAdapter = new ScheduleRecyclerAdapter(getContext(), dataSource.getCourses());
 
         RecyclerView recyclerViewGrid = view.findViewById(R.id.schedule_grid);
         RecyclerView recyclerViewList = view.findViewById(R.id.schedule_list);

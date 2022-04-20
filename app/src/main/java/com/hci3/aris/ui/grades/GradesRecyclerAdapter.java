@@ -47,6 +47,10 @@ public class GradesRecyclerAdapter extends RecyclerView.Adapter<GradesRecyclerAd
         holder.gradePrelim.setText(model.getGradePrelim());
         holder.gradeMidterm.setText(model.getGradeMidterm());
         holder.gradeFinal.setText(model.getGradeFinal());
+
+        holder.gradeDetails.setOnClickListener(l ->
+                Navigation.findNavController(l).navigate(R.id.action_navigation_grades_to_subnav_grade_details_list)
+        );
     }
 
     /**
@@ -67,6 +71,7 @@ public class GradesRecyclerAdapter extends RecyclerView.Adapter<GradesRecyclerAd
         private final TextView gradePrelim;
         private final TextView gradeMidterm;
         private final TextView gradeFinal;
+        private final Button gradeDetails;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -81,10 +86,7 @@ public class GradesRecyclerAdapter extends RecyclerView.Adapter<GradesRecyclerAd
             gradeMidterm = itemView.findViewById(R.id.midterm_grade);
             gradeFinal = itemView.findViewById(R.id.finals_grade);
 
-            Button gradeDetails = itemView.findViewById(R.id.grade_details);
-            gradeDetails.setOnClickListener(l ->
-                    Navigation.findNavController(l).navigate(R.id.action_navigation_grades_to_subnav_grade_details_list)
-            );
+            gradeDetails = itemView.findViewById(R.id.grade_details);
         }
     }
 }
