@@ -22,7 +22,10 @@
         <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fillViewport="true">
+            android:clipToPadding="false"
+            android:fillViewport="true"
+            android:paddingTop="2dp"
+            android:paddingBottom="78dp">
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/grade_details_grid"

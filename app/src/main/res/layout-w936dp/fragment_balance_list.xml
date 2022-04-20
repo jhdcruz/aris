@@ -64,8 +64,8 @@
                 android:paddingTop="2dp"
                 android:paddingBottom="78dp"
                 app:layoutManager="LinearLayoutManager"
-                tools:listitem="@layout/component_card_balance"
-                tools:ignore="InconsistentLayout" />
+                tools:ignore="InconsistentLayout"
+                tools:listitem="@layout/component_card_balance" />
 
         </androidx.core.widget.NestedScrollView>
 

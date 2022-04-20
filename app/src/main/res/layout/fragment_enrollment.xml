@@ -5,17 +5,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginTop="8dp"
+    android:layout_marginTop="2dp"
     tools:context=".ui.balance.EnrollmentTabView">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/enrollment_list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:clipToPadding="true"
         android:fillViewport="true"
         android:paddingTop="2dp"
-        android:paddingBottom="78dp"
         app:layoutManager="LinearLayoutManager"
         tools:ignore="InconsistentLayout"
         tools:listitem="@layout/component_card_balance" />
