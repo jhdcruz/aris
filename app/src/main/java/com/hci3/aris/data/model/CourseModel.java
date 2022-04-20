@@ -7,6 +7,9 @@ public class CourseModel {
     // Course Details
     private final String courseCode;
     private final String courseName;
+    private final String courseProf;
+    private final String courseSched;
+    private final String courseRoom;
     private final int courseUnits;
 
     // Course Grades
@@ -15,10 +18,14 @@ public class CourseModel {
     private final double gradeFinal;
 
     // Constructor
-    public CourseModel(String courseCode, String courseName, int courseUnits,
+    public CourseModel(String courseCode, String courseName, String courseProf, String courseSched,
+                       String courseRoom, int courseUnits,
                        double gradePrelim, double gradeMidterm, double gradeFinal) {
         this.courseCode = courseCode;
         this.courseName = courseName;
+        this.courseProf = courseProf;
+        this.courseSched = courseSched;
+        this.courseRoom = courseRoom;
         this.courseUnits = courseUnits;
         this.gradePrelim = gradePrelim;
         this.gradeMidterm = gradeMidterm;
@@ -32,6 +39,18 @@ public class CourseModel {
 
     public String getCourseName() {
         return courseName;
+    }
+
+    public String getCourseProf() {
+        return courseProf;
+    }
+
+    public String getCourseRoom() {
+        return courseRoom;
+    }
+
+    public String getCourseSched() {
+        return courseSched;
     }
 
     public int getCourseUnits() {

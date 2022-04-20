@@ -9,11 +9,7 @@
         android:name="com.hci3.aris.ui.profile.ProfileFragment"
         android:label="@string/title_profile"
         tools:layout="@layout/fragment_profile" />
-    <fragment
-        android:id="@+id/navigation_schedule"
-        android:name="com.hci3.aris.ui.schedule.ScheduleFragment"
-        android:label="@string/title_schedule"
-        tools:layout="@layout/fragment_schedule" />
+
     <fragment
         android:id="@+id/navigation_balance"
         android:name="com.hci3.aris.ui.balance.BalanceFragment"
@@ -79,6 +75,31 @@
             android:label="Grade Details"
             tools:layout="@layout/fragment_grade_details_tabs" />
 
+    </navigation>
+
+    <navigation
+        android:id="@+id/navigation_schedule_graph"
+        app:startDestination="@id/navigation_schedule">
+
+        <fragment
+            android:id="@+id/navigation_schedule"
+            android:name="com.hci3.aris.ui.schedule.ScheduleFragment"
+            android:label="@string/title_schedule"
+            tools:layout="@layout/fragment_schedule">
+            <action
+                android:id="@+id/action_navigation_schedule_main_to_subnav_schedule_plot"
+                app:destination="@id/subnav_schedule_plot"
+                app:enterAnim="@anim/nav_default_enter_anim"
+                app:exitAnim="@anim/nav_default_exit_anim"
+                app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+                app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        </fragment>
+
+        <fragment
+            android:id="@+id/subnav_schedule_plot"
+            android:name="com.hci3.aris.ui.schedule.SchedulePlotFragment"
+            android:label="Schedule Plot"
+            tools:layout="@layout/fragment_schedule_plot" />
     </navigation>
 
 </navigation>
