@@ -4,6 +4,7 @@
     <string name="copyright">"Copyright © 2022 | ProjectHCI-3"</string>
 
     <!-- Strings related to login -->
+    <string name="login_student_no">Student No.</string>
     <string name="login_email">Email</string>
     <string name="login_pass">Password</string>
     <string name="login_signin">Sign in</string>

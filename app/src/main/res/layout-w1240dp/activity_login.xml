@@ -32,32 +32,30 @@
 
             <EditText
                 android:id="@+id/username"
-                style="@style/Widget.Material3.AutoCompleteTextView.OutlinedBox"
+                style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp"
-                android:drawableStart="@android:drawable/sym_action_email"
-                android:drawableTint="#CDCDCD"
+                android:layout_marginTop="100dp"
+                android:drawableStart="@drawable/ic_baseline_person_24"
+                android:drawablePadding="6dp"
                 android:fontFamily="sans-serif"
-                android:hint="@string/login_email"
+                android:hint="@string/login_student_no"
                 android:importantForAutofill="no"
                 android:inputType="textEmailAddress"
                 android:minHeight="48dp"
                 android:selectAllOnFocus="true"
                 android:singleLine="true"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                 android:textSize="20sp" />
 
             <EditText
                 android:id="@+id/password"
-                style="@style/Widget.Material3.AutoCompleteTextView.OutlinedBox"
+                style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
-                android:drawableStart="@android:drawable/ic_lock_lock"
-                android:drawableTint="#CDCDCD"
+                android:drawableStart="@drawable/ic_baseline_lock_24"
+                android:drawablePadding="6dp"
                 android:hint="@string/login_pass"
                 android:imeActionLabel="@string/login_signin"
                 android:imeOptions="actionDone"
@@ -66,7 +64,6 @@
                 android:minHeight="48dp"
                 android:selectAllOnFocus="true"
                 android:singleLine="true"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                 android:textSize="20sp" />
 
             <com.google.android.material.button.MaterialButton
@@ -144,6 +141,14 @@
                 android:scaleType="centerCrop"
                 app:srcCompat="@mipmap/logo_aris" />
 
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="@string/copyright"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
         </LinearLayout>
 
     </LinearLayout>
@@ -159,17 +164,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <com.google.android.material.textview.MaterialTextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:text="@string/copyright"
-        android:textAlignment="center"
-        android:textAppearance="@style/TextAppearance.AppCompat.Small"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
