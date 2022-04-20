@@ -50,7 +50,9 @@ public class ScheduleRecyclerAdapter extends RecyclerView.Adapter<ScheduleRecycl
         holder.courseProf.setText("Prof. " + model.getCourseProf());
 
         holder.courseContact.setOnClickListener(l -> {
-            Uri uri = Uri.parse("https://tip.instructure.com/courses/" + model.getCourseCanvasCode() + "/assignments");
+            Uri uri = Uri.parse("https://tip.instructure.com/courses/" + model.getCourseCanvasCode()
+                    + "/assignments");
+
             Intent intent = new Intent(Intent.ACTION_VIEW, uri);
             context.startActivity(intent);
         });
@@ -58,7 +60,9 @@ public class ScheduleRecyclerAdapter extends RecyclerView.Adapter<ScheduleRecycl
         // Redirect to Canvas course conference
         //  through the app (if installed) or through a browser
         holder.courseConference.setOnClickListener(l -> {
-            Uri uri = Uri.parse("https://tip.instructure.com/courses/" + model.getCourseCanvasCode() + "/conferences");
+            Uri uri = Uri.parse("https://tip.instructure.com/courses/" + model.getCourseCanvasCode()
+                    + "/conferences");
+
             Intent intent = new Intent(Intent.ACTION_VIEW, uri);
             context.startActivity(intent);
         });
