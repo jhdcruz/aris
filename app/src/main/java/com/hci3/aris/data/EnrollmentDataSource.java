@@ -13,7 +13,7 @@ public class EnrollmentDataSource {
             List<EnrollmentModel> enrollmentList = new ArrayList<>();
 
             enrollmentList.add(new EnrollmentModel("2021-2022 | 1st Sem", "23239828", "08/15/2021", 48000.00, 48000.00, true));
-            enrollmentList.add(new EnrollmentModel("2021-2022 | 2nd Sem", "20394280", "02/18/2022", 48000.00, 3500.00, false));
+            enrollmentList.add(new EnrollmentModel("2021-2022 | 2nd Sem", "20394280", "02/18/2022", 48000.00, 46000, false));
 
             return enrollmentList;
         } catch (Exception exception) {
