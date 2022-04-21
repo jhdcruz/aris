@@ -36,7 +36,7 @@
                     android:textStyle="bold" />
 
                 <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/enrolled_courses"
+                    android:id="@+id/enrolled_courses_list"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="4dp"

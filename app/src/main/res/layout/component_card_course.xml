@@ -5,8 +5,7 @@
     style="@style/Widget.Material3.CardView.Elevated"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginHorizontal="12dp"
-    android:layout_marginVertical="8dp"
+    android:layout_margin="8dp"
     android:fillViewport="true"
     app:contentPadding="12dp">
 
@@ -30,6 +29,14 @@
                 android:orientation="vertical">
 
                 <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/course_section"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="IT12S2"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.textview.MaterialTextView
                     android:id="@+id/course_code"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -46,6 +53,12 @@
                     android:singleLine="false"
                     android:text="Course Name"
                     android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/course_units"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Course Units" />
 
                 <com.google.android.material.textview.MaterialTextView
                     android:id="@+id/course_prof"
@@ -74,7 +87,15 @@
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
-                <TextView
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/course_sched"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Tu, Th, Sat"
+                    android:textAlignment="viewEnd"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.textview.MaterialTextView
                     android:id="@+id/course_room"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -82,38 +103,8 @@
                     android:text="ONLINE"
                     android:textAlignment="viewEnd"
                     android:textAllCaps="true"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
+                    android:textSize="14sp" />
             </LinearLayout>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_marginTop="8dp"
-            android:layout_weight="1"
-            android:gravity="fill_horizontal"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/course_contact"
-                style="@style/Widget.Material3.Button.TonalButton.Icon"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="4dp"
-                android:paddingVertical="8dp"
-                android:text="Assignments"
-                app:icon="@drawable/ic_baseline_assignment_24" />
-
-            <Button
-                android:id="@+id/course_conference"
-                style="@style/Widget.Material3.Button.TonalButton.Icon"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
-                android:paddingVertical="8dp"
-                android:text="Conference"
-                app:icon="@drawable/ic_baseline_groups_24" />
         </LinearLayout>
     </LinearLayout>
 

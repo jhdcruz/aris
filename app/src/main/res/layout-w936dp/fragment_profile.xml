@@ -4,68 +4,65 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginHorizontal="4dp"
-    android:orientation="vertical"
+    android:layout_marginHorizontal="8dp"
+    android:orientation="horizontal"
     tools:context=".ui.profile.ProfileFragment">
 
     <com.google.android.material.card.MaterialCardView
         style="@style/Widget.Material3.CardView.Elevated"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
         app:contentPadding="12dp">
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
+            android:gravity="center"
+            android:orientation="vertical">
 
             <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/profile_image"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="8dp"
                 android:contentDescription="Profile picture"
                 app:shapeAppearanceOverlay="@style/roundedImageView"
                 app:srcCompat="@android:mipmap/sym_def_app_icon" />
 
             <LinearLayout
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
-                android:layout_weight="1"
                 android:gravity="center_vertical"
                 android:orientation="vertical">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="2dp"
+                    android:gravity="fill_horizontal"
                     android:orientation="horizontal">
 
-                    <com.google.android.material.textview.MaterialTextView
-                        android:id="@+id/textView3"
+                    <TextView
+                        android:id="@+id/textView9"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:checkable="false"
                         android:text="Enrolled"
                         android:textAllCaps="true"
                         android:textColor="@color/primary"
-                        android:textSize="14sp"
                         android:textStyle="bold" />
 
-                    <com.google.android.material.textview.MaterialTextView
-                        android:id="@+id/textView7"
+                    <TextView
+                        android:id="@+id/textView3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="#2112020"
-                        android:textAllCaps="true"
+                        android:text="#2113060"
+                        android:textAlignment="viewEnd"
                         android:textSize="12sp" />
 
                 </LinearLayout>
 
-                <com.google.android.material.textview.MaterialTextView
+                <TextView
                     android:id="@+id/textView4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -74,33 +71,32 @@
                     android:textSize="20sp"
                     android:textStyle="bold" />
 
-                <com.google.android.material.textview.MaterialTextView
+                <TextView
                     android:id="@+id/textView8"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="mjdelacruz@tip.edu.ph"
-                    android:textSize="16sp"
                     android:textStyle="bold" />
 
-                <com.google.android.material.textview.MaterialTextView
+                <TextView
                     android:id="@+id/textView6"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="2dp"
+                    android:layout_marginTop="4dp"
                     android:text="BSIT (RE18)"
-                    android:textSize="16sp" />
+                    android:textSize="14sp" />
 
-                <com.google.android.material.textview.MaterialTextView
+                <TextView
                     android:id="@+id/textView12"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="1st Year"
-                    android:textSize="16sp" />
+                    android:text="1st Year" />
 
             </LinearLayout>
         </LinearLayout>
 
     </com.google.android.material.card.MaterialCardView>
+
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -115,21 +111,20 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="10dp"
-                android:layout_marginTop="12dp"
+                android:layout_marginHorizontal="12dp"
                 android:layout_marginBottom="8dp"
                 android:gravity="fill_horizontal|center_vertical"
                 android:orientation="horizontal">
 
-                <com.google.android.material.textview.MaterialTextView
+                <TextView
+                    android:id="@+id/textView11"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="4dp"
                     android:text="Enrolled Courses"
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
-                <com.google.android.material.textview.MaterialTextView
+                <TextView
                     android:id="@+id/enrolled_count"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -158,12 +153,12 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
-                android:layout_marginHorizontal="10dp"
+                android:layout_marginHorizontal="12dp"
                 android:layout_marginBottom="8dp"
                 android:background="?android:attr/listDivider" />
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/enrolled_courses_list"
+                android:id="@+id/enrolled_courses_grid"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -177,20 +172,19 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="10dp"
-                android:layout_marginTop="12dp"
-                android:layout_marginBottom="8dp"
+                android:layout_marginVertical="4dp"
                 android:gravity="fill_horizontal|center_vertical"
                 android:orientation="horizontal">
 
-                <com.google.android.material.textview.MaterialTextView
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="4dp"
+                    android:layout_marginEnd="2dp"
                     android:text="Previously Enrolled Courses"
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
-                <com.google.android.material.textview.MaterialTextView
+                <TextView
                     android:id="@+id/previous_enrolled_count"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -223,7 +217,7 @@
                 android:background="?android:attr/listDivider" />
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/previous_courses_list"
+                android:id="@+id/previous_courses_grid"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -233,6 +227,7 @@
 
             </androidx.recyclerview.widget.RecyclerView>
         </LinearLayout>
+
 
     </androidx.core.widget.NestedScrollView>
 

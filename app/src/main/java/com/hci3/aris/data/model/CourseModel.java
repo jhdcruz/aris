@@ -5,9 +5,11 @@ import java.util.Locale;
 public class CourseModel {
 
     // Course Details
+    private final String courseSection;
     private final String courseCode;
     private final String courseName;
     private final String courseProf;
+    private final String courseTime;
     private final String courseSched;
     private final String courseRoom;
     private final String courseCanvasCode;
@@ -19,12 +21,14 @@ public class CourseModel {
     private final double gradeFinal;
 
     // Constructor
-    public CourseModel(String courseCode, String courseName, String courseProf, String courseSched,
-                       String courseRoom, String courseCanvasCode, int courseUnits,
+    public CourseModel(String courseSection, String courseCode, String courseName, String courseProf, String courseTime,
+                       String courseSched, String courseRoom, String courseCanvasCode, int courseUnits,
                        double gradePrelim, double gradeMidterm, double gradeFinal) {
+        this.courseSection = courseSection;
         this.courseCode = courseCode;
         this.courseName = courseName;
         this.courseProf = courseProf;
+        this.courseTime = courseTime;
         this.courseSched = courseSched;
         this.courseRoom = courseRoom;
         this.courseCanvasCode = courseCanvasCode;
@@ -36,6 +40,10 @@ public class CourseModel {
 
     // Getters
 
+
+    public String getCourseSection() {
+        return courseSection;
+    }
 
     public String getCourseCanvasCode() {
         return courseCanvasCode;
@@ -55,6 +63,10 @@ public class CourseModel {
 
     public String getCourseRoom() {
         return courseRoom;
+    }
+
+    public String getCourseTime() {
+        return courseTime;
     }
 
     public String getCourseSched() {

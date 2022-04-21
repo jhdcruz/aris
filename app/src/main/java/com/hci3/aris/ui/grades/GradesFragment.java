@@ -61,7 +61,7 @@ public class GradesFragment extends Fragment {
             recyclerViewList.setAdapter(courseAdapter);
         }
 
-        MaterialTextView enrolledCourses = view.findViewById(R.id.enrolled_courses);
+        MaterialTextView enrolledCourses = view.findViewById(R.id.enrolled_courses_list);
         enrolledCourses.setText("(" + courseAdapter.getItemCount() + ")");
 
         Button viewAll = view.findViewById(R.id.courses_view_all);
