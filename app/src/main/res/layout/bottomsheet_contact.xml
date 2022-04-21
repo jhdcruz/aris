@@ -37,6 +37,7 @@
         android:importantForAutofill="no"
         android:inputType="textMultiLine"
         android:lines="8"
+        android:scrollIndicators="right"
         android:scrollbars="vertical"
         android:singleLine="false"
         android:verticalScrollbarPosition="defaultPosition" />
