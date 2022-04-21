@@ -32,6 +32,7 @@
                     android:layout_height="wrap_content"
                     android:singleLine="false"
                     android:text="Course Code"
+                    android:textColor="@color/primary"
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
