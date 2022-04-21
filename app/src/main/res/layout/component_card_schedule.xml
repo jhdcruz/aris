@@ -101,7 +101,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="4dp"
-                android:paddingVertical="12dp"
+                android:paddingVertical="8dp"
                 android:text="Assignments"
                 app:icon="@drawable/ic_baseline_assignment_24" />
 
@@ -111,7 +111,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
-                android:paddingVertical="12dp"
+                android:paddingVertical="8dp"
                 android:text="Conference"
                 app:icon="@drawable/ic_baseline_groups_24" />
         </LinearLayout>
