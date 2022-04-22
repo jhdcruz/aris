@@ -48,10 +48,8 @@ public class SemesterFragment extends Fragment {
 
         List<SemesterModel> semesterModelArray = new ArrayList<>();
 
-        semesterModelArray.add(new SemesterModel("1st Sem", "2021-2022", 1.54, 20, 20, 8));
         semesterModelArray.add(new SemesterModel("2nd Sem", "2021-2022", 1.40, 18, 18, 7));
-        semesterModelArray.add(new SemesterModel("1st Sem", "2020-2021", 1.34, 20, 20, 9));
-        semesterModelArray.add(new SemesterModel("2nd Sem", "2020-2021", 1.20, 20, 18, 8));
+        semesterModelArray.add(new SemesterModel("1st Sem", "2021-2022", 1.54, 20, 20, 8));
 
         SemesterAdapter semesterAdapter = new SemesterAdapter(getContext(), semesterModelArray);
 
