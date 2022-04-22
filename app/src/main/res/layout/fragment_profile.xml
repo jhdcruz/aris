@@ -1,111 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:layout_marginHorizontal="4dp"
-    android:orientation="vertical"
+    android:fillViewport="true"
     tools:context=".ui.profile.ProfileFragment">
 
-    <com.google.android.material.card.MaterialCardView
-        style="@style/Widget.Material3.CardView.Elevated"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:contentPadding="12dp">
 
-        <LinearLayout
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <com.google.android.material.card.MaterialCardView
+            style="@style/Widget.Material3.CardView.Elevated"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
-
-            <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/profile_image"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_marginEnd="4dp"
-                android:contentDescription="Profile picture"
-                app:shapeAppearanceOverlay="@style/roundedImageView"
-                app:srcCompat="@android:mipmap/sym_def_app_icon" />
+            app:contentPadding="12dp">
 
             <LinearLayout
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
-                android:layout_weight="1"
                 android:gravity="center_vertical"
-                android:orientation="vertical">
+                android:orientation="horizontal">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/profile_image"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginEnd="4dp"
+                    android:contentDescription="Profile picture"
+                    app:shapeAppearanceOverlay="@style/roundedImageView"
+                    app:srcCompat="@android:mipmap/sym_def_app_icon" />
 
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="2dp"
-                    android:orientation="horizontal">
+                    android:layout_marginStart="4dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/textView3"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:checkable="false"
+                            android:text="Enrolled"
+                            android:textAllCaps="true"
+                            android:textColor="@color/primary"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/textView7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="#2112020"
+                            android:textAllCaps="true"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
 
                     <com.google.android.material.textview.MaterialTextView
-                        android:id="@+id/textView3"
-                        android:layout_width="0dp"
+                        android:id="@+id/textView4"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:checkable="false"
-                        android:text="Enrolled"
-                        android:textAllCaps="true"
-                        android:textColor="@color/primary"
-                        android:textSize="14sp"
+                        android:singleLine="false"
+                        android:text="Juan Dela Cruz"
+                        android:textSize="20sp"
                         android:textStyle="bold" />
 
                     <com.google.android.material.textview.MaterialTextView
-                        android:id="@+id/textView7"
-                        android:layout_width="wrap_content"
+                        android:id="@+id/textView8"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="#2112020"
-                        android:textAllCaps="true"
-                        android:textSize="12sp" />
+                        android:text="mjdelacruz@tip.edu.ph"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/textView6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="BSIT (RE18)"
+                        android:textSize="16sp" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/textView12"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="1st Year"
+                        android:textSize="16sp" />
 
                 </LinearLayout>
-
-                <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/textView4"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:singleLine="false"
-                    android:text="Juan Dela Cruz"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
-
-                <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/textView8"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="mjdelacruz@tip.edu.ph"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
-
-                <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/textView6"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="2dp"
-                    android:text="BSIT (RE18)"
-                    android:textSize="16sp" />
-
-                <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/textView12"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="1st Year"
-                    android:textSize="16sp" />
-
             </LinearLayout>
-        </LinearLayout>
 
-    </com.google.android.material.card.MaterialCardView>
-
-    <androidx.core.widget.NestedScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fillViewport="true">
+        </com.google.android.material.card.MaterialCardView>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -233,7 +237,6 @@
 
             </androidx.recyclerview.widget.RecyclerView>
         </LinearLayout>
+    </LinearLayout>
 
-    </androidx.core.widget.NestedScrollView>
-
-</LinearLayout>
+</androidx.core.widget.NestedScrollView>
