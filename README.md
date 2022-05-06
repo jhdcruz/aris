@@ -12,17 +12,13 @@
 
 ## Some Screenshots
 
-<p>
-<img src="./docs/1.jpg" alt="ARIS Logo" width="200" height="400" />
-<img src="./docs/1l.jpg" alt="ARIS Logo" width="200" height="400" />
-<img src="./docs/2.jpg" alt="ARIS Logo" width="200" height="400" />
-<img src="./docs/2l.jpg" alt="ARIS Logo" width="200" height="400" />
-<img src="./docs/3.jpg" alt="ARIS Logo" width="200" height="400" />
-<img src="./docs/3l.jpg" alt="ARIS Logo" width="200" height="400" />
-<img src="./docs/4.jpg" alt="ARIS Logo" width="200" height="400" />
-<img src="./docs/4l.jpg" alt="ARIS Logo" width="200" height="400" />
-<img src="./docs/5.jpg" alt="ARIS Logo" width="200" height="400" />
-<img src="./docs/5l.jpg" alt="ARIS Logo" width="200" height="400" />
+<p align="center">
+<img src="./docs/a.jpg" alt="App screenshot" width="200" height="400" />
+<img src="./docs/b.jpg" alt="App screenshot" width="200" height="400" />
+<img src="./docs/c.jpg" alt="App screenshot" width="200" height="400" />
+<img src="./docs/d.jpg" alt="App screenshot" width="200" height="400" />
+<img src="./docs/e.jpg" alt="App screenshot" width="200" height="400" />
+<img src="./docs/f.jpg" alt="App screenshot" width="200" height="400" />
 </p>
 
 > **NOTE:** Not an actual data. Sample data are used.
